@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Oct 12 19:36:57 2023
+# Process ID: 35673
+# Current directory: /home/duguid/RedPitaya-FPGA
+# Command line: vivado -source red_pitaya_vivado_project_Z10.tcl -tclargs v0.94 
+# Log file: /home/duguid/RedPitaya-FPGA/vivado.log
+# Journal file: /home/duguid/RedPitaya-FPGA/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source red_pitaya_vivado_project_Z10.tcl
+update_compile_order -fileset sources_1
+source /home/duguid/RedPitaya-FPGA/prj/Examples/make_project.tcl
+source /home/duguid/RedPitaya-FPGA/prj/Examples/make_project.tcl
+ls
+pwd
+cd ..
+ls
+cd Examples
+ls
+source /home/duguid/RedPitaya-FPGA/prj/Examples/make_project.tcl
+update_compile_order -fileset sources_1
+current_project redpitaya
+close_project
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+regenerate_bd_layout
+open_run impl_1

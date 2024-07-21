@@ -1,0 +1,2373 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:35 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 326241
+License: Customer
+
+Current time: 	Wed Oct 11 01:05:08 CDT 2023
+Time zone: 	Central Standard Time (America/Monterrey)
+
+OS: Linux
+OS Version: 5.15.0-41-generic
+OS Architecture: amd64
+Available processors (cores): 4
+
+Display: :0
+Screen size: 1366x768
+Screen resolution (DPI): 100
+Available screens: 3
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/opt/Xilinx/Vivado/2020.1/tps/lnx64/jre9.0.4
+Java executable location: 	/opt/Xilinx/Vivado/2020.1/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	duguid
+User home directory: /home/duguid
+User working directory: /home/duguid/RedPitaya-FPGA
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2020.1
+RDI_DATADIR: /opt/Xilinx/Vivado/2020.1/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2020.1/bin
+
+Vivado preferences file location: /home/duguid/.Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: /home/duguid/.Xilinx/Vivado/2020.1/
+Vivado layouts directory: /home/duguid/.Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	/opt/Xilinx/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	/home/duguid/RedPitaya-FPGA/vivado.log
+Vivado journal file location: 	/home/duguid/RedPitaya-FPGA/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-326241-silverred
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /opt/Xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: /opt/Xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: /opt/Xilinx/Vivado/2020.1
+XILINX_VITIS: 
+XILINX_VIVADO: /opt/Xilinx/Vivado/2020.1
+XILINX_VIVADO_HLS: /opt/Xilinx/Vivado/2020.1
+
+
+GUI allocated memory:	372 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,574 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: START_PROGRESS_DIALOG
+// bz (cs):  Sourcing Tcl script 'red_pitaya_vivado_project_Z10.tcl' : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: source red_pitaya_vivado_project_Z10.tcl 
+// Tcl Message: # set prj_name [lindex $argv 0] # set prj_defs [lindex $argv 1] # puts "Project name: $prj_name" 
+// Tcl Message: Project name: v0.94 
+// Tcl Message: # puts "Defines: $prj_defs" 
+// Tcl Message: Defines:  
+// Tcl Message: # cd prj/$prj_name # set path_brd ../../brd # set path_rtl rtl # set path_ip  ip # set path_bd  project/redpitaya.srcs/sources_1/bd/system/hdl # set path_sdc ../../sdc # set path_sdc_prj sdc # set_param board.repoPaths [list $path_brd] # set_param iconstr.diffPairPulltype {opposite} # set part xc7z010clg400-1 # create_project -part $part -force redpitaya ./project 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 115 MB (+118100kb) [00:00:19]
+// [Engine Memory]: 1,592 MB (+1518275kb) [00:00:19]
+// WARNING: HEventQueue.dispatchEvent() is taking  3532 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,464 MB. GUI used memory: 61 MB. Current time: 10/11/23, 1:05:13 AM CDT
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LOAD_FEATURE
+// Tcl Message: create_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:10 . Memory (MB): peak = 7101.051 ; gain = 59.094 ; free physical = 3284 ; free virtual = 10441 
+// Tcl Message: INFO: [BD::TCL 103-2003] Currently there is no design <system> in project, so creating one... 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  2279 ms.
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// Tcl Message: Wrote  : </home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd>  
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// Tcl Message: INFO: [BD::TCL 103-2004] Making design <system> as current_bd_design. 
+// Tcl Message: ## common::send_gid_msg -ssname BD::TCL -id 2005 -severity "INFO" "Currently the variable <design_name> is equal to \"$design_name\"." 
+// Tcl Message: INFO: [BD::TCL 103-2005] Currently the variable <design_name> is equal to "system". 
+// Tcl Message: INFO: [BD::TCL 103-2011] Checking if the following IPs exist in the project's IP catalog:   xilinx.com:ip:axi_protocol_converter:2.1 xilinx.com:ip:proc_sys_reset:5.0 xilinx.com:ip:processing_system7:5.5 xilinx.com:ip:xadc_wiz:3.3 xilinx.com:ip:xlconstant:1.1  . 
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z010clg400-1 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// Tcl Message: create_bd_cell: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 7132.762 ; gain = 0.000 ; free physical = 2835 ; free virtual = 10046 
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: RSB_PARAM_PROP
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PARAM_PROP
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : </home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd>  Wrote  : </home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/ui/bd_c954508f.ui>  
+// Tcl Message: # generate_target all [get_files    system.bd] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: VHDL Output written to : /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/synth/system.v VHDL Output written to : /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/sim/system.v VHDL Output written to : /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/hdl/system_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_protocol_converter_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_register_slice_0 . 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7 . 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc . INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant . 
+// Tcl Message: Exporting to file /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/hw_handoff/system.hwh Generated Block Design Tcl file /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl Generated Hardware Definition File /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/synth/system.hwdef 
+// Tcl Message: generate_target: Time (s): cpu = 00:00:47 ; elapsed = 00:00:45 . Memory (MB): peak = 7132.762 ; gain = 0.000 ; free physical = 2744 ; free virtual = 9999 
+// Tcl Message: # add_files                         ../../$path_rtl # add_files                         $path_rtl # add_files                         $path_bd # set ip_files [glob -nocomplain $path_ip/*.xci] # if {$ip_files != ""} { # add_files                         $ip_files # } # add_files -fileset constrs_1      $path_sdc/red_pitaya.xdc # add_files -fileset constrs_1      $path_sdc_prj/red_pitaya.xdc # import_files -force 
+// Tcl Message: INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1' INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1' 
+// Tcl Message: # set_property top red_pitaya_top [current_fileset] # update_compile_order -fileset sources_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: STOP_PROGRESS_DIALOG
+// Elapsed time: 66 seconds
+dismissDialog("Sourcing Tcl script 'red_pitaya_vivado_project_Z10.tcl'"); // bz (cs)
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 28 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL (aI, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1); // B (F, cs)
+// [GUI Memory]: 129 MB (+8333kb) [00:02:06]
+// PAPropertyPanels.initPanels (red_pitaya_top.sv) elapsed time: 0.2s
+// Elapsed time: 19 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true, false, false, false, false, true); // B (F, cs) - Double Click - Node
+// [GUI Memory]: 142 MB (+7639kb) [00:02:24]
+selectCodeEditor("red_pitaya_top.sv", 541, 260); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 56, 345); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 44, 346); // bP (w, cs)
+// Elapsed time: 10 seconds
+selectCodeEditor("red_pitaya_top.sv", 227, 349); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 502, 336); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("red_pitaya_top.sv", 686, 285); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectCodeEditor("red_pitaya_top.sv", 90, 365); // bP (w, cs)
+// Elapsed time: 13 seconds
+selectCodeEditor("red_pitaya_top.sv", 67, 231); // bP (w, cs)
+// Elapsed time: 19 seconds
+selectCodeEditor("red_pitaya_top.sv", 13, 230); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 501, 305); // bP (w, cs)
+// Elapsed time: 10 seconds
+selectCodeEditor("red_pitaya_top.sv", 32, 432); // bP (w, cs)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // E (g, cs)
+selectCodeEditor("red_pitaya_top.sv", 270, 382); // bP (w, cs)
+// Elapsed time: 15 seconds
+selectCodeEditor("red_pitaya_top.sv", 45, 282); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 11 seconds
+selectCodeEditor("red_pitaya_top.sv", 754, 233); // bP (w, cs)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat", true); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,646 MB. GUI used memory: 84 MB. Current time: 10/11/23, 1:09:35 AM CDT
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pid_dat"); // l (au, cs)
+selectCodeEditor("red_pitaya_top.sv", 125, 172); // bP (w, cs)
+selectCodeEditor("red_pitaya_top.sv", 25, 205); // bP (w, cs)
+typeControlKey((HResource) null, "red_pitaya_top.sv", 'v'); // bP (w, cs)
+// Elapsed time: 12 seconds
+selectCodeEditor("red_pitaya_top.sv", 355, 188); // bP (w, cs)
+// Elapsed time: 13 seconds
+selectCodeEditor("red_pitaya_top.sv", 78, 351); // bP (w, cs)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // E (g, cs)
+selectCodeEditor("red_pitaya_top.sv", 269, 248); // bP (w, cs)
+// Elapsed time: 18 seconds
+selectCodeEditor("red_pitaya_top.sv", 56, 394); // bP (w, cs)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // E (g, cs)
+// Elapsed time: 24 seconds
+selectCodeEditor("red_pitaya_top.sv", 90, 387); // bP (w, cs)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // E (g, cs)
+selectCodeEditor("red_pitaya_top.sv", 290, 181); // bP (w, cs)
+// Elapsed time: 20 seconds
+selectCodeEditor("red_pitaya_top.sv", 808, 141); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// [Engine Memory]: 1,679 MB (+7609kb) [00:07:12]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,679 MB. GUI used memory: 85 MB. Current time: 10/11/23, 1:12:05 AM CDT
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1, true); // B (F, cs) - Node
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "led"); // ac (Q, F)
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "VHDL", 3); // cm (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// Tcl Command: 'file mkdir /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/new'
+dismissDialog("Create Source File"); // F (c)
+// Tcl Message: file mkdir /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/new 
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 19 seconds
+dismissDialog("Add Sources"); // c (cs)
+// Tcl Message: close [ open /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/new/led.vhd w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/new/led.vhd 
+// I (cs): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton (v, C)
+dismissDialog("Define Module"); // I (cs)
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,699 MB. GUI used memory: 85 MB. Current time: 10/11/23, 1:12:40 AM CDT
+// Elapsed time: 28 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv)]", 1); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), i_led : led(Behavioral) (led.vhd)]", 8, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, red_pitaya_top (red_pitaya_top.sv), i_led : led(Behavioral) (led.vhd)]", 8, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("led.vhd", 5, 244); // bP (w, cs)
+typeControlKey((HResource) null, "led.vhd", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 22 seconds
+selectCodeEditor("led.vhd", 628, 171); // bP (w, cs)
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: FILE_SET_NEW
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,733 MB. GUI used memory: 144 MB. Current time: 10/11/23, 1:13:45 AM CDT
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// 'k' command handler elapsed time: 6 seconds
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// [GUI Memory]: 152 MB (+2614kb) [00:11:35]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 360 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (f)
+// 'c' command handler elapsed time: 6 seconds
+dismissDialog("Launch Runs"); // f (cs)
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "Run Implementation"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -jobs 2 
+// Tcl Message: [Wed Oct 11 00:19:59 2023] Launched impl_1... Run output will be captured here: /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 193 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,854 MB. GUI used memory: 97 MB. Current time: 10/11/23, 1:23:20 AM CDT
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 2,301 MB (+563591kb) [00:18:39]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,306 MB. GUI used memory: 97 MB. Current time: 10/11/23, 1:23:30 AM CDT
+// TclEventType: DESIGN_NEW
+// Xgd.load filename: /opt/Xilinx/Vivado/2020.1/data/parts/xilinx/zynq/devint/zynq/xc7z010/xc7z010.xgd; ZipEntry: xc7z010_detail.xgd elapsed time: 2.1s
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 2.3s
+// [Engine Memory]: 2,425 MB (+9341kb) [00:18:43]
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 2.4s
+// Device: addNotify
+// [GUI Memory]: 174 MB (+15170kb) [00:18:44]
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  4751 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.11 . Memory (MB): peak = 7411.887 ; gain = 0.000 ; free physical = 2897 ; free virtual = 9994 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 466 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Constraints 18-5170] The checkpoint was created with non-default parameter values which do not match the current Vivado settings.  Mismatching parameters are: 
+// Tcl Message:   general.maxThreads 
+// Tcl Message: INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00.86 ; elapsed = 00:00:00.85 . Memory (MB): peak = 7900.605 ; gain = 5.004 ; free physical = 2361 ; free virtual = 9452 
+// Tcl Message: Restored from archive | CPU: 0.880000 secs | Memory: 10.578705 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.86 ; elapsed = 00:00:00.85 . Memory (MB): peak = 7900.605 ; gain = 5.004 ; free physical = 2361 ; free virtual = 9452 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7900.605 ; gain = 0.000 ; free physical = 2361 ; free virtual = 9453 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 58 instances were transformed.   IOBUF => IOBUF (IBUF, OBUFT): 16 instances   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 2 instances   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 40 instances  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// Tcl Message: open_run: Time (s): cpu = 00:00:34 ; elapsed = 00:00:24 . Memory (MB): peak = 8091.156 ; gain = 679.270 ; free physical = 2261 ; free virtual = 9368 
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// [GUI Memory]: 184 MB (+1593kb) [00:18:46]
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// [GUI Memory]: 194 MB (+805kb) [00:18:49]
+// [GUI Memory]: 204 MB (+8kb) [00:18:50]
+// WARNING: HEventQueue.dispatchEvent() is taking  3484 ms.
+// TclEventType: TIMING_SUMMARY_UPDATED
+// WARNING: HEventQueue.dispatchEvent() is taking  1985 ms.
+// 'dZ' command handler elapsed time: 32 seconds
+// Elapsed time: 33 seconds
+dismissDialog("Open Implemented Design"); // bz (cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,511 MB. GUI used memory: 155 MB. Current time: 10/11/23, 1:23:50 AM CDT
+// Elapsed time: 653 seconds
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Wed Oct 11 00:34:41 2023] Launched impl_1... Run output will be captured here: /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.runs/impl_1/runme.log 
+// bz (cs):  Generate Bitstream : addNotify
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// [GUI Memory]: 215 MB (+782kb) [00:30:39]
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 96 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+// Elapsed time: 195 seconds
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aL (aI, cs)
+// Tcl Command: 'rdi::info_commands {ls*}'
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "ls", true); // aF (ac, cs)
+// Tcl Command: 'ls'
+// Tcl Command: 'ls'
+// Tcl Message: ls 
+// Tcl Message: dts ip project rtl sdc tbn 
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "cd ..", true); // aF (ac, cs)
+// Tcl Command: 'cd ..'
+// Tcl Command: 'cd ..'
+// Tcl Message: cd .. 
+// Tcl Command: 'rdi::info_commands {ls*}'
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "ls", true); // aF (ac, cs)
+// Tcl Command: 'ls'
+// Tcl Command: 'ls'
+// Tcl Message: ls 
+// Tcl Message: axi4lite barebones barebones_250 classic Examples fsbl logic logic_250 mercury stream_app stream_app_250 stream_app_4ch tft v0.94 v0.94_250 
+// Tcl Command: 'rdi::info_commands {cd*}'
+// Elapsed time: 22 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "cd Examples", true); // aF (ac, cs)
+// Tcl Command: 'cd Examples'
+// Tcl Command: 'cd Examples'
+// Tcl Message: cd Examples 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,519 MB. GUI used memory: 164 MB. Current time: 10/11/23, 1:40:17 AM CDT
+// Tcl Command: 'rdi::info_commands {ls*}'
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "ls", true); // aF (ac, cs)
+// Tcl Command: 'ls'
+// Tcl Command: 'ls'
+// Tcl Message: ls 
+// Tcl Message: Frequency_counter Knight_rider Led_blink make_project.tcl README.md Simple_moving_average Stopwatch Vga_draw Vga_game Vga_image 
+// Elapsed time: 18 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOORPLANNING, "Floorplanning"); // af (cs, Popup.HeavyWeightWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_IO_PLANNING, "I/O Planning"); // af (cs, Popup.HeavyWeightWindow)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // af (cs, Popup.HeavyWeightWindow)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // af (cs, Popup.HeavyWeightWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_TIMING, "Timing"); // af (cs, Popup.HeavyWeightWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_IO_PLANNING, "I/O Planning"); // af (cs, Popup.HeavyWeightWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_TIMING, "Timing"); // af (cs, Popup.HeavyWeightWindow)
+selectMenuItem(RDIResourceCommand.RDICommands_RUN_SCRIPT, "Run Tcl Script..."); // ai (cs, Popup.HeavyWeightWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+// Run Command: RDIResourceCommand.RDICommands_RUN_SCRIPT
+// Elapsed time: 19 seconds
+setFileChooser("/home/duguid/RedPitaya-FPGA/prj/Examples/make_project.tcl");
+// Source Tcl File: '/home/duguid/RedPitaya-FPGA/prj/Examples/make_project.tcl'
+// Tcl Command: 'source /home/duguid/RedPitaya-FPGA/prj/Examples/make_project.tcl'
+// bz (cs):  Source Tcl Script : addNotify
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  3619 ms.
+// Tcl Message: source /home/duguid/RedPitaya-FPGA/prj/Examples/make_project.tcl 
+// Tcl Message: # set project_name "Led_blink" # cd $project_name # source make_project.tcl ## set project_name Led_blink ## set part_name xc7z010clg400-1 ## set bd_path tmp/$project_name/$project_name.srcs/sources_1/bd/system ## file delete -force tmp/$project_name ## create_project $project_name tmp/$project_name -part $part_name 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.1/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 8091.156 ; gain = 0.000 ; free physical = 2077 ; free virtual = 9313 
+// Tcl Message: ## create_bd_design system 
+// Tcl Message: Wrote  : </home/duguid/RedPitaya-FPGA/prj/Examples/Led_blink/tmp/Led_blink/Led_blink.srcs/sources_1/bd/system/system.bd>  
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,546 MB. GUI used memory: 168 MB. Current time: 10/11/23, 1:41:10 AM CDT
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 2,546 MB (+286kb) [00:36:19]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: ## update_ip_catalog 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Tcl Message: ## startgroup ## create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7 processing_system7_0 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: ## set_property -dict [list CONFIG.PCW_USE_S_AXI_HP0 {1}] [get_bd_cells processing_system7_0] 
+// Tcl Message: ## set_property -dict [list CONFIG.PCW_IMPORT_BOARD_PRESET {cfg/red_pitaya.xml}] [get_bd_cells processing_system7_0] 
+// Tcl Message: INFO: [PS7-1] Applying Custom Preset cfg/red_pitaya.xml... 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: ## connect_bd_net [get_bd_ports adc_clk_n_i] [get_bd_pins util_ds_buf_0/IBUF_DS_N] 
+// Tcl Message: ## connect_bd_net [get_bd_ports daisy_p_i] [get_bd_pins util_ds_buf_1/IBUF_DS_P] 
+// Tcl Message: ## connect_bd_net [get_bd_ports daisy_n_i] [get_bd_pins util_ds_buf_1/IBUF_DS_N] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: Wrote  : </home/duguid/RedPitaya-FPGA/prj/Examples/Led_blink/tmp/Led_blink/Led_blink.srcs/sources_1/bd/system/system.bd>  Wrote  : </home/duguid/RedPitaya-FPGA/prj/Examples/Led_blink/tmp/Led_blink/Led_blink.srcs/sources_1/bd/system/ui/bd_c954508f.ui>  VHDL Output written to : /home/duguid/RedPitaya-FPGA/prj/Examples/Led_blink/tmp/Led_blink/Led_blink.srcs/sources_1/bd/system/synth/system.v VHDL Output written to : /home/duguid/RedPitaya-FPGA/prj/Examples/Led_blink/tmp/Led_blink/Led_blink.srcs/sources_1/bd/system/sim/system.v VHDL Output written to : /home/duguid/RedPitaya-FPGA/prj/Examples/Led_blink/tmp/Led_blink/Led_blink.srcs/sources_1/bd/system/hdl/system_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 226 MB (+273kb) [00:36:52]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf_1 . INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf_2 . INFO: [BD 41-1029] Generation completed for the IP Integrator block c_counter_binary_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 . 
+// Tcl Message: Exporting to file /home/duguid/RedPitaya-FPGA/prj/Examples/Led_blink/tmp/Led_blink/Led_blink.srcs/sources_1/bd/system/hw_handoff/system.hwh Generated Block Design Tcl file /home/duguid/RedPitaya-FPGA/prj/Examples/Led_blink/tmp/Led_blink/Led_blink.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl Generated Hardware Definition File /home/duguid/RedPitaya-FPGA/prj/Examples/Led_blink/tmp/Led_blink/Led_blink.srcs/sources_1/bd/system/synth/system.hwdef 
+// Tcl Message: generate_target: Time (s): cpu = 00:00:30 ; elapsed = 00:00:28 . Memory (MB): peak = 8124.055 ; gain = 16.000 ; free physical = 2043 ; free virtual = 9262 
+// Tcl Message: ## make_wrapper -files [get_files $bd_path/system.bd] -top ## add_files -norecurse $bd_path/hdl/system_wrapper.v ## set files [glob -nocomplain projects/$project_name/*.v projects/$project_name/*.sv] ## if {[llength $files] > 0} { ##   add_files -norecurse $files ## } ## set files [glob -nocomplain cfg/*.xdc] ## if {[llength $files] > 0} { ##   add_files -norecurse -fileset constrs_1 $files ## } ## set_property VERILOG_DEFINE {TOOL_VIVADO} [current_fileset] ## set_property STRATEGY Flow_PerfOptimized_High [get_runs synth_1] ## set_property STRATEGY Performance_NetDelay_high [get_runs impl_1] 
+// 'cQ' command handler elapsed time: 61 seconds
+// HMemoryUtils.trashcanNow. Engine heap size: 2,615 MB. GUI used memory: 169 MB. Current time: 10/11/23, 1:41:46 AM CDT
+// Elapsed time: 35 seconds
+dismissDialog("Source Tcl Script"); // bz (cs)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 72 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bz (cs):  Open Block Design : addNotify
+// Tcl Message: current_project redpitaya 
+// TclEventType: RSB_OPEN_DIAGRAM
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Tcl Message: open_bd_design {/home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd} 
+dismissDialog("Open Block Design"); // bz (cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (l, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,635 MB. GUI used memory: 168 MB. Current time: 10/11/23, 1:43:05 AM CDT
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 30, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cs): Launch Runs: addNotify
+selectButton("OptionPane.button", "OK"); // JButton (v, B)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_MODIFY
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run impl_1 -prev_step  
+// TclEventType: RUN_LAUNCH
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Wed Oct 11 00:43:23 2023] Launched impl_1... Run output will be captured here: /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,703 MB. GUI used memory: 169 MB. Current time: 10/11/23, 1:43:25 AM CDT
+// TclEventType: RUN_STATUS_CHANGE
+// [Engine Memory]: 2,703 MB (+30868kb) [00:39:07]
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 71 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+// Elapsed time: 66 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // af (cs, Popup.HeavyWeightWindow)
+selectMenuItem(RDIResourceCommand.RDICommands_RUN_SCRIPT, "Run Tcl Script..."); // ai (cs, Popup.HeavyWeightWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+// Run Command: RDIResourceCommand.RDICommands_RUN_SCRIPT
+setFileChooser("/home/duguid/RedPitaya-FPGA/prj/Examples/make_project.tcl");
+// Source Tcl File: '/home/duguid/RedPitaya-FPGA/prj/Examples/make_project.tcl'
+// Tcl Command: 'source /home/duguid/RedPitaya-FPGA/prj/Examples/make_project.tcl'
+// bz (cs):  Source Tcl Script : addNotify
+// Tcl Message: source /home/duguid/RedPitaya-FPGA/prj/Examples/make_project.tcl 
+// Tcl Message: # set project_name "Knight_rider" # cd $project_name 
+// Tcl Message: couldn't change working directory to "Knight_rider": no such file or directory     while executing "cd $project_name"     (file "/home/duguid/RedPitaya-FPGA/prj/Examples/make_project.tcl" line 12) 
+// 'cQ' command handler elapsed time: 8 seconds
+// [GUI Memory]: 239 MB (+1030kb) [00:41:04]
+dismissDialog("Source Tcl Script"); // bz (cs)
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bz (cs):  Open Block Design : addNotify
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: open_bd_design {/home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd} 
+dismissDialog("Open Block Design"); // bz (cs)
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ai (cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cs): Run Synthesis: addNotify
+selectButton("OptionPane.button", "OK"); // JButton (v, B)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // A (cs)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: [Wed Oct 11 00:46:22 2023] Launched synth_1... Run output will be captured here: /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 5 seconds
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // aA (g, cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Synthesis Completed: addNotify
+// Elapsed time: 123 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION, "Run Implementation"); // a (Q, ag)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -jobs 2 
+// Tcl Message: [Wed Oct 11 00:48:38 2023] Launched impl_1... Run output will be captured here: /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 5 seconds
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (l, cs)
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 57 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 45); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 46); // B (F, cs)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// ag (cs): Implementation Completed: addNotify
+// Elapsed time: 98 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bz (cs):  Reloading : addNotify
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd] 
+// Tcl Message: refresh_design 
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,711 MB. GUI used memory: 146 MB. Current time: 10/11/23, 1:51:39 AM CDT
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 2,711 MB. GUI used memory: 146 MB. Current time: 10/11/23, 1:51:39 AM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  2490 ms.
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.11 . Memory (MB): peak = 8231.273 ; gain = 0.000 ; free physical = 2140 ; free virtual = 9342 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 466 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2020.1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: INFO: [Timing 38-478] Restoring timing data from binary archive. 
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// Tcl Message: INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Constraints 18-5170] The checkpoint was created with non-default parameter values which do not match the current Vivado settings.  Mismatching parameters are: 
+// Tcl Message:   general.maxThreads 
+// Tcl Message: INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,703 MB. GUI used memory: 123 MB. Current time: 10/11/23, 1:51:43 AM CDT
+// [Engine Memory]: 2,889 MB (+53245kb) [00:46:53]
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 2s
+// Device: addNotify
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  4013 ms.
+// Tcl Message: Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.92 . Memory (MB): peak = 8231.273 ; gain = 0.000 ; free physical = 2045 ; free virtual = 9243 
+// Tcl Message: Restored from archive | CPU: 1.230000 secs | Memory: 2.089851 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.92 . Memory (MB): peak = 8231.273 ; gain = 0.000 ; free physical = 2045 ; free virtual = 9243 
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:12 . Memory (MB): peak = 8242.277 ; gain = 11.004 ; free physical = 1899 ; free virtual = 9078 
+// TclEventType: DRC_ADDED
+// Device view-level: 0.0
+// [Engine Memory]: 3,577 MB (+570262kb) [00:46:56]
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// [Engine Memory]: 3,786 MB (+31730kb) [00:46:57]
+// TclEventType: POWER_UPDATED
+// WARNING: HEventQueue.dispatchEvent() is taking  2757 ms.
+// TclEventType: TIMING_SUMMARY_UPDATED
+// WARNING: HEventQueue.dispatchEvent() is taking  1701 ms.
+// Elapsed time: 21 seconds
+dismissDialog("Reloading"); // bz (cs)
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// bz (cs):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Wed Oct 11 00:51:59 2023] Launched impl_1... Run output will be captured here: /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// Elapsed time: 70 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+// aH (cs): Feedback Request: addNotify
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+selectButton(PAResourceTtoZ.TouchpointSurveyDialog_REMIND_ME_LATER, "Remind me Later"); // a (aH)
+dismissDialog("Feedback Request"); // aH (cs)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bz (cs):  Open Block Design : addNotify
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: open_bd_design {/home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd} 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+dismissDialog("Open Block Design"); // bz (cs)
+// Elapsed time: 12 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 46); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 46); // B (F, cs)
+// [GUI Memory]: 251 MB (+167kb) [00:52:00]
+// Elapsed time: 736 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bz (cs):  Open Block Design : addNotify
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: open_bd_design {/home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd} 
+dismissDialog("Open Block Design"); // bz (cs)
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1128, 345, 1224, 576, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_MODULE, "Add Module..."); // ai (ao, cs)
+// cU (cs): Add Module: addNotify
+// Elapsed time: 17 seconds
+selectCheckBox(PAResourceQtoS.RSBAddModuleDialog_HIDE_INCOMPATIBLE_MODULES, "Hide incompatible modules", false); // g (Q, cU): FALSE
+// Elapsed time: 30 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (cU)
+dismissDialog("Add Module"); // cU (cs)
+// Elapsed time: 114 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1091, 392, 1224, 576, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_IP, "Add IP..."); // ai (ao, cs)
+// Elapsed time: 14 seconds
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "util"); // OverlayTextField (az, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Utility Buffer", 1, "Utility Buffer", 0, false); // L (J, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Utility Buffer", 1, "Utility Buffer", 0, false); // L (J, ResizableWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Utility Buffer", 1); // L (J, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Utility Buffer", 1, "Utility Buffer", 0, false, false, false, false, false, true); // L (J, ResizableWindow) - Double Click
+// bz (cs):  Add IP : addNotify
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.1 util_ds_buf_0 
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bz (cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,001 MB. GUI used memory: 175 MB. Current time: 10/11/23, 2:09:10 AM CDT
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// Tcl Message: delete_bd_objs [get_bd_nets proc_sys_reset_0_peripheral_aresetn] [get_bd_nets xadc_ip2intc_irpt] [get_bd_intf_nets axi_protocol_converter_0_M_AXI] [get_bd_intf_nets Vp_Vn_1] [get_bd_intf_nets Vaux0_1] [get_bd_intf_nets Vaux1_1] [get_bd_intf_nets Vaux8_1] [get_bd_intf_nets Vaux9_1] [get_bd_cells xadc] 
+// TclEventType: FILE_SET_DELETE
+// bz (cs):  Confirm Delete : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Elapsed time: 10 seconds
+dismissDialog("Confirm Delete"); // bz (cs)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_intf_nets axi_register_slice_0_M_AXI] [get_bd_cells axi_protocol_converter_0] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// bz (cs):  Confirm Delete : addNotify
+// Tcl Message: delete_bd_objs [get_bd_intf_nets processing_system7_0_M_AXI_GP1] [get_bd_nets proc_sys_reset_0_interconnect_aresetn] [get_bd_cells axi_register_slice_0] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Elapsed time: 13 seconds
+dismissDialog("Confirm Delete"); // bz (cs)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets xlconstant_dout] [get_bd_cells proc_sys_reset] 
+// Tcl Command: 'set_property location {4.5 1030 567} [get_bd_cells util_ds_buf_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {4.5 1030 567} [get_bd_cells util_ds_buf_0] 
+// Run Command: RDIResourceCommand.RDICommands_COPY
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_COPY_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: copy_bd_objs /  [get_bd_cells {util_ds_buf_0}] 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_COPY_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: copy_bd_objs /  [get_bd_cells {util_ds_buf_0}] 
+// Tcl Command: 'set_property location {3 1323 575} [get_bd_cells util_ds_buf_2]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {3 1323 575} [get_bd_cells util_ds_buf_2] 
+// Tcl Command: 'set_property location {2 1024 721} [get_bd_cells util_ds_buf_1]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2 1024 721} [get_bd_cells util_ds_buf_1] 
+// Tcl Command: 'set_property location {1.5 776 449} [get_bd_cells util_ds_buf_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1.5 776 449} [get_bd_cells util_ds_buf_0] 
+// Tcl Command: 'set_property location {2 803 583} [get_bd_cells util_ds_buf_1]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2 803 583} [get_bd_cells util_ds_buf_1] 
+// Elapsed time: 46 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 860, 430, 1224, 576, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_IP, "Add IP..."); // ai (ao, cs)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "bina"); // OverlayTextField (az, ResizableWindow)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "binar"); // OverlayTextField (az, ResizableWindow)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "binary"); // OverlayTextField (az, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Binary Counter", 0, "Binary Counter", 0, false); // L (J, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Binary Counter", 0, "Binary Counter", 0, false); // L (J, ResizableWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Binary Counter", 0); // L (J, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Binary Counter", 0, "Binary Counter", 0, false, false, false, false, false, true); // L (J, ResizableWindow) - Double Click
+// Tcl Message: startgroup 
+// bz (cs):  Add IP : addNotify
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:c_counter_binary:12.0 c_counter_binary_0 
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bz (cs)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1042, 460, 1224, 576, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_IP, "Add IP..."); // ai (ao, cs)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "slice"); // OverlayTextField (az, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Slice", 2, "Slice", 0, false); // L (J, ResizableWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Slice", 2); // L (J, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Slice", 2, "Slice", 0, false, false, false, false, false, true); // L (J, ResizableWindow) - Double Click
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// bz (cs):  Add IP : addNotify
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0 
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bz (cs)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: delete_bd_objs [get_bd_cells xlconstant] 
+// Elapsed time: 33 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets processing_system7_0_fclk_clk0] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins processing_system7/FCLK_CLK0] [get_bd_pins c_counter_binary_0/CLK] 
+// Elapsed time: 19 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins xlslice_0/Din] [get_bd_pins c_counter_binary_0/Q] 
+// Elapsed time: 12 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 948, 356, 1224, 576, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ai (ao, cs)
+// bM (cs): Create Port: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (bM)
+dismissDialog("Create Port"); // bM (cs)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_intf_nets s_axi_hp3_1] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_intf_nets s_axi_hp2_1] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_intf_nets s_axi_hp1_1] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_intf_nets s_axi_hp0_1] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets m_axi_gp0_aclk_1] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets s_axi_hp0_aclk] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets processing_system7_0_fclk_clk3] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets processing_system7_0_fclk_clk1] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets processing_system7_0_fclk_clk2] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets processing_system7_0_fclk_reset1_n] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets processing_system7_0_fclk_reset0_n] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets processing_system7_0_fclk_reset2_n] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets processing_system7_0_fclk_reset3_n] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_intf_nets processing_system7_0_M_AXI_GP0] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_intf_nets processing_system7_SPI_0] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_intf_nets processing_system7_GPIO_0] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets s_axi_hp1_aclk] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets s_axi_hp2_aclk] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets s_axi_hp3_aclk] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins processing_system7/S_AXI_HP0_ACLK] [get_bd_pins processing_system7/FCLK_CLK0] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins processing_system7/S_AXI_GP0_ACLK] [get_bd_pins processing_system7/FCLK_CLK0] 
+// Elapsed time: 120 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Elapsed time: 15 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1022, 362, 1224, 576, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_INTERFACE_PORT, "Create Interface Port..."); // ai (ao, cs)
+// bz (cs):  Create Interface Port : addNotify
+// bx (cs): Create Interface Port: addNotify
+// Elapsed time: 10 seconds
+setText(PAResourceAtoD.CreateRSBInterfaceDialog_INTERFACE_NAME, "daisy"); // ac (Q, bx)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (bx)
+dismissDialog("Create Interface Port"); // bx (cs)
+// [GUI Memory]: 267 MB (+4025kb) [01:09:45]
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1126, 432, 1224, 576, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ai (ao, cs)
+// bM (cs): Create Port: addNotify
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "daisy"); // ac (Q, bM)
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // e (Q, bM)
+// Elapsed time: 10 seconds
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "daisy_p_o"); // ac (Q, bM)
+selectCheckBox(PAResourceAtoD.CreateRSBPortDialog_CREATE_VECTOR, "Create vector:", true); // g (Q, bM): TRUE
+setSpinner(PAResourceAtoD.CreateRSBPortDialog_FROM, "1"); // U (Q, bM)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (bM)
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // bM (cs)
+// bz (cs):  Create Port : addNotify
+// Tcl Message: create_bd_port -dir O -from 1 -to 0 daisy_p_o 
+dismissDialog("Create Port"); // bz (cs)
+// Run Command: RDIResourceCommand.RDICommands_COPY
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_COPY_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: copy_bd_objs /  [get_bd_ports {daisy_p_o}] 
+// Tcl Command: 'set_property location {820 516} [get_bd_ports daisy_p_o1]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {820 516} [get_bd_ports daisy_p_o1] 
+// Elapsed time: 23 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 620, 444, 1224, 576, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cs)
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "External Port Properties..."); // ai (ao, cs)
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+// [GUI Memory]: 282 MB (+1806kb) [01:10:48]
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "daisy_n_o", true); // ac (Q, cs)
+// Tcl Command: 'set_property name daisy_n_o [get_bd_ports daisy_p_o1]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name daisy_n_o [get_bd_ports daisy_p_o1] 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 348, 170, 1224, 576, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ai (ao, cs)
+// bM (cs): Create Port: addNotify
+// Elapsed time: 23 seconds
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "OBUFF_DS_P"); // ac (Q, bM)
+setSpinner(PAResourceAtoD.CreateRSBPortDialog_FROM, "1"); // U (Q, bM)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (bM)
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // bM (cs)
+// bz (cs):  Create Port : addNotify
+// Tcl Message: create_bd_port -dir O -from 1 -to 0 -type clk OBUFF_DS_P 
+dismissDialog("Create Port"); // bz (cs)
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'create_bd_port -dir O -from 1 -to 0 -type clk OBUFF_DS_P' 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 338, 171, 1224, 576, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cs)
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Block Pin Properties..."); // ai (ao, cs)
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 306, 171, 1224, 576, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC, "Customize Block..."); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cs): Re-customize IP: addNotify
+selectRadioButton((HResource) null, "OBUFDS"); // aV
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+// Tcl Command: 'set_property -dict [list CONFIG.C_BUF_TYPE {OBUFDS}] [get_bd_cells util_ds_buf_2]'
+dismissDialog("Re-customize IP"); // r (cs)
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// r (cs): Re-customize IP: addNotify
+// bz (r):  Customize IP : addNotify
+// Tcl Message: set_property -dict [list CONFIG.C_BUF_TYPE {OBUFDS}] [get_bd_cells util_ds_buf_2] 
+dismissDialog("Customize IP"); // bz (r)
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_ports daisy_p_o] [get_bd_pins util_ds_buf_2/OBUF_DS_P] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_ports daisy_n_o] [get_bd_pins util_ds_buf_2/OBUF_DS_N] 
+// Elapsed time: 11 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 455, 420, 1224, 576, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_ORIENTATION, "Orientation"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderMenu_IP_DOCUMENTATION, "IP Documentation"); // af (ao, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC, "Customize Block..."); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cs): Re-customize IP: addNotify
+selectRadioButton((HResource) null, "IOBUFDS"); // aV
+selectRadioButton((HResource) null, "IBUFDS"); // aV
+// Elapsed time: 10 seconds
+selectRadioButton((HResource) null, "BUFH"); // aV
+selectRadioButton((HResource) null, "IBUFDS"); // aV
+// Elapsed time: 12 seconds
+selectButton(PAResourceAtoD.CustomizeCoreDialog_IP_LOCATION, "IP Location"); // E (g, r)
+selectButton(PAResourceAtoD.CustomizeCoreDialog_DOCUMENTATION, "Documentation"); // E (g, r)
+selectRadioButton((HResource) null, "BUFGCE"); // aV
+selectRadioButton((HResource) null, "BUFHCE"); // aV
+selectRadioButton((HResource) null, "BUFGCE"); // aV
+selectRadioButton((HResource) null, "BUFH"); // aV
+selectRadioButton((HResource) null, "BUFG"); // aV
+selectRadioButton((HResource) null, "IBUFDSGTE"); // aV
+selectRadioButton((HResource) null, "IOBUFDS"); // aV
+selectRadioButton((HResource) null, "OBUFDS"); // aV
+selectRadioButton((HResource) null, "IBUFDS"); // aV
+// Elapsed time: 11 seconds
+setText("C Size", "2"); // D (bj, r)
+selectRadioButton((HResource) null, "IBUFDS"); // aV
+selectRadioButton((HResource) null, "OBUFDS"); // aV
+selectRadioButton((HResource) null, "IOBUFDS"); // aV
+selectRadioButton((HResource) null, "BUFG"); // aV
+selectRadioButton((HResource) null, "BUFH"); // aV
+selectRadioButton((HResource) null, "IBUFDS"); // aV
+selectRadioButton((HResource) null, "OBUFDS"); // aV
+selectRadioButton((HResource) null, "IOBUFDS"); // aV
+selectRadioButton((HResource) null, "BUFH"); // aV
+selectRadioButton((HResource) null, "BUFGCE"); // aV
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cs)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 453, 404, 1224, 576, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderView_ORIENTATION, "Orientation"); // af (ao, cs)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 277, 321, 1224, 576, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_IP, "Add IP..."); // ai (ao, cs)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "BUFF"); // OverlayTextField (az, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Utility Buffer", 0, "Utility Buffer", 0, false); // L (J, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Utility Buffer", 0, "Utility Buffer", 0, false, false, false, false, true, false); // L (J, ResizableWindow) - Popup Trigger
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "BUFF"); // OverlayTextField (az, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Utility Buffer", 0, "Utility Buffer", 0, false); // L (J, ResizableWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Utility Buffer", 0); // L (J, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Utility Buffer", 0, "Utility Buffer", 0, false, false, false, false, false, true); // L (J, ResizableWindow) - Double Click
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// bz (cs):  Add IP : addNotify
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.1 util_ds_buf_3 
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bz (cs)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 455, 323, 1224, 576, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_IP_SETTINGS, "IP Settings..."); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_IP_SETTINGS
+// d (cs): Settings: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (d)
+dismissDialog("Settings"); // d (cs)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 457, 316, 1224, 576, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderView_ORIENTATION, "Orientation"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderMenu_IP_DOCUMENTATION, "IP Documentation"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cs)
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Block Properties..."); // ai (ao, cs)
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+// [GUI Memory]: 311 MB (+15549kb) [01:14:42]
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Properties", 1); // i (c, cs)
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+expandTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "CONFIG ; ", 2); // l (C, cs)
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// Elapsed time: 10 seconds
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "C_BUFGCE_DIV ; 1", 3, "1", 1, false); // l (C, cs)
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "C_BUFGCE_DIV ; 1", 3, "1", 1, false); // l (C, cs)
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: set_property CONFIG.C_BUFGCE_DIV 2 [get_bd_cells /util_ds_buf_3] 
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// Elapsed time: 10 seconds
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "CONFIG ; ", 2, "CONFIG", 0, true); // l (C, cs) - Node
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+expandTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "CONFIG ; ", 2); // l (C, cs)
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "C_BUFGCE_DIV ; 1", 3, "1", 1, false); // l (C, cs)
+selectButton(PAResourceTtoZ.TclObjectView_REMOVE_PROPERTIES, "Tcl Object View_remove"); // E (g, cs)
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "C_BUFG_GT_SYNC ; false", 3, "C_BUFG_GT_SYNC", 0, false); // l (C, cs)
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "C_BUF_TYPE ; IBUFDS", 4, "C_BUF_TYPE", 0, false); // l (C, cs)
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "C_BUF_TYPE ; IBUFDS", 4, "IBUFDS", 1, false); // l (C, cs)
+// TclEventType: RSB_CANVAS_LOCATION
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "C_REFCLK_ICNTL_TX ; 00000", 6, "00000", 1, false); // l (C, cs)
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "C_SIZE ; 1", 7, "1", 1, false); // l (C, cs)
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "C_SIZE ; 1", 7, "1", 1, false); // l (C, cs)
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "IP", 2); // i (c, cs)
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Properties", 1); // i (c, cs)
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+// TclEventType: RSB_CANVAS_LOCATION
+// TclEventType: RSB_BLOCK_SIZE
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "IP", 2); // i (c, cs)
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "General", 0); // i (c, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,172 MB. GUI used memory: 175 MB. Current time: 10/11/23, 2:39:10 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 3,170 MB. GUI used memory: 174 MB. Current time: 10/11/23, 9:44:13 AM CDT
+// Elapsed time: 27080 seconds
+selectTreeTable(PAResourceEtoH.ExpReportTreePanel_EXP_REPORT_TREE_TABLE, "Implementation ;  ;  ;  ; ", 5, "Implementation", 0, true); // O (J, cs) - Node
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// f (cs): Launch Runs: addNotify
+// Elapsed time: 32 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (f)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (f)
+dismissDialog("Launch Runs"); // f (cs)
+// Elapsed time: 26 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 447, 192); // dT (ae, cs)
+closeMainWindow("redpitaya - [/home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.xpr] - Vivado 2020.1"); // cs
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_PROJECT
+// am (cs): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_DONT_SAVE, "Don't Save"); // a (am)
+selectButton(PAResourceQtoS.SaveProjectUtils_DONT_SAVE, "Don't Save"); // a (am)
+// A (cs): Close Project: addNotify
+dismissDialog("Save Project"); // am (cs)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bz (cs):  Close Project : addNotify
+// TclEventType: PROJECT_CLOSE
+dismissDialog("Close Project"); // A (cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,065 MB. GUI used memory: 144 MB. Current time: 10/11/23, 9:53:05 AM CDT
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 3,065 MB. GUI used memory: 167 MB. Current time: 10/11/23, 9:53:05 AM CDT
+// 'b' command handler elapsed time: 6 seconds
+// TclEventType: REPORT_IP_STATUS_STALE
+// WARNING: HEventQueue.dispatchEvent() is taking  1106 ms.
+// Tcl Message: close_project 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Re-customize IP"); // r (cs)
+dismissDialog("Close Project"); // bz (cs)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: DESIGN_CLOSE
+// Elapsed time: 12 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // E (g, cs)
+// Tcl Message: regenerate_bd_layout 
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// f (cs): Launch Runs: addNotify
+dismissDialog("No Implementation Results Available"); // A (cs)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cD' command handler elapsed time: 3 seconds
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (g, cs)
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: FILE_SET_NEW
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL (aI, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v)]", 1); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v), system_i : system (system.bd), system (system.v)]", 3); // B (F, cs)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v), system_i : system (system.bd)]", 2); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4); // B (F, cs)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4); // B (F, cs)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v)]", 1); // B (F, cs)
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 643, 14); // dT (ae, cs)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 275 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, (String) null); // aF (ac, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// Elapsed time: 10 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, (String) null); // aF (ac, cs)
+// TclEventType: RUN_STEP_COMPLETED
+// 'k' command handler elapsed time: 3 seconds
+selectButton("OptionPane.button", "Cancel"); // JButton (v, B)
+// TclEventType: RUN_STEP_COMPLETED
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // aa (q, cs)
+selectMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // aa (q, cs)
+dismissMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // aa (q, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV, "Hide Flow Navigator"); // ai (cs, Popup.HeavyWeightWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // aa (q, cs)
+// Run Command: PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV
+selectMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // aa (q, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV, "Show Flow Navigator"); // ai (cs, Popup.HeavyWeightWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // aa (q, cs)
+// Run Command: PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV
+selectMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // aa (q, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV, "Hide Flow Navigator"); // ai (cs, Popup.HeavyWeightWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // aa (q, cs)
+// Run Command: PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV
+selectMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // aa (q, cs)
+// TclEventType: RUN_STEP_COMPLETED
+selectMenuItem(PAResourceCommand.PACommandNames_ZOOM_AREA, "Zoom Area"); // ai (cs, Popup.HeavyWeightWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // aa (q, cs)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_AREA
+selectMenu(PAResourceItoN.MainMenuMgr_HELP, "Help"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_HELP, "Help"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // aa (q, cs)
+selectMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // aa (q, cs)
+dismissMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // aa (q, cs)
+// ag (cs): Bitstream Generation Completed: addNotify
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // aa (q, cs)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// Run Command: PAResourceCommand.PACommandNames_REPORTS_WINDOW
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ag)
+// aH (cs): Feedback Request: addNotify
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+selectButton(PAResourceTtoZ.TouchpointSurveyDialog_REMIND_ME_LATER, "Remind me Later"); // a (aH)
+selectButton(PAResourceTtoZ.TouchpointSurveyDialog_REMIND_ME_LATER, "Remind me Later"); // a (aH)
+dismissDialog("Feedback Request"); // aH (cs)
+// Elapsed time: 11 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aB, cs)
+closeTask("IP Integrator", "Block Design", "DesignTask.IP_INTEGRATOR");
+// A (cs): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (A)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (A)
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aB, cs)
+dismissDialog("Confirm Close"); // A (cs)
+setText("RDIResource.SearchCommandComponent_QUICK_ACCESS", "WINDOW", true); // OverlayTextField (O, cs)
+// HOptionPane Error: 'Can't find a command that matches 'WINDOW' (Command Not Found)'
+selectButton("OptionPane.button", "OK"); // JButton (v, B)
+setText("RDIResource.SearchCommandComponent_QUICK_ACCESS", "tab", true); // OverlayTextField (O, cs)
+// HOptionPane Error: 'Can't find a command that matches 'tab' (Command Not Found)'
+selectButton("OptionPane.button", "OK"); // JButton (v, B)
+selectMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_VIEW, "View"); // aa (q, cs)
+selectMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // aa (q, cs)
+selectMenuItem(RDIResourceCommand.RDICommands_RESET_LAYOUT, "Reset Layout"); // ai (cs, Popup.HeavyWeightWindow)
+dismissMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // aa (q, cs)
+// Run Command: RDIResourceCommand.RDICommands_RESET_LAYOUT
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // af (cs, Popup.HeavyWeightWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // af (cs, Popup.HeavyWeightWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // af (cs, Popup.HeavyWeightWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // af (cs, Popup.HeavyWeightWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // af (cs, Popup.HeavyWeightWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // af (cs, Popup.HeavyWeightWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Elapsed time: 213 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // E (g, cs)
+// Tcl Message: regenerate_bd_layout 
+// Elapsed time: 45 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL (aI, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, system_wrapper (system_wrapper.v)]", 1); // B (F, cs)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // i (N, cs)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i (N, cs)
+selectTab((HResource) null, (HResource) null, "Board", 3); // aL (aI, cs)
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL (aI, cs)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cs): Re-customize IP: addNotify
+// Elapsed time: 198 seconds
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Control", 1); // bi (E, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Basic", 0); // bi (E, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Information", 1); // bi (E, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "IP Symbol", 0); // bi (E, r)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,610 MB. GUI used memory: 114 MB. Current time: 10/11/23, 10:23:08 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,599 MB. GUI used memory: 111 MB. Current time: 10/11/23, 10:53:08 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,595 MB. GUI used memory: 109 MB. Current time: 10/11/23, 11:23:08 AM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1396 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,582 MB. GUI used memory: 106 MB. Current time: 10/11/23, 11:53:09 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,582 MB. GUI used memory: 106 MB. Current time: 10/11/23, 12:23:09 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,581 MB. GUI used memory: 106 MB. Current time: 10/11/23, 12:53:09 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,581 MB. GUI used memory: 106 MB. Current time: 10/11/23, 1:23:09 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,581 MB. GUI used memory: 106 MB. Current time: 10/11/23, 1:53:09 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,581 MB. GUI used memory: 106 MB. Current time: 10/11/23, 2:23:09 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,581 MB. GUI used memory: 106 MB. Current time: 10/11/23, 2:53:10 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,581 MB. GUI used memory: 106 MB. Current time: 10/11/23, 3:23:10 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,581 MB. GUI used memory: 106 MB. Current time: 10/11/23, 3:53:10 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,581 MB. GUI used memory: 106 MB. Current time: 10/11/23, 4:23:10 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,581 MB. GUI used memory: 106 MB. Current time: 10/11/23, 4:53:10 PM CDT

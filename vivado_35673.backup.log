@@ -1,0 +1,1203 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Oct 12 19:36:57 2023
+# Process ID: 35673
+# Current directory: /home/duguid/RedPitaya-FPGA
+# Command line: vivado -source red_pitaya_vivado_project_Z10.tcl -tclargs v0.94 
+# Log file: /home/duguid/RedPitaya-FPGA/vivado.log
+# Journal file: /home/duguid/RedPitaya-FPGA/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source red_pitaya_vivado_project_Z10.tcl
+# set prj_name [lindex $argv 0]
+# set prj_defs [lindex $argv 1]
+# puts "Project name: $prj_name"
+Project name: v0.94
+# puts "Defines: $prj_defs"
+Defines: 
+# cd prj/$prj_name
+# set path_brd ../../brd
+# set path_rtl rtl
+# set path_ip  ip
+# set path_bd  project/redpitaya.srcs/sources_1/bd/system/hdl
+# set path_sdc ../../sdc
+# set path_sdc_prj sdc
+# set_param board.repoPaths [list $path_brd]
+# set_param iconstr.diffPairPulltype {opposite}
+# set part xc7z010clg400-1
+# create_project -part $part -force redpitaya ./project
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.1/data/ip'.
+create_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:12 . Memory (MB): peak = 7067.707 ; gain = 39.078 ; free physical = 149 ; free virtual = 11296
+# set_property verilog_define $prj_defs [current_fileset]
+# source                            $path_ip/systemZ10.tcl
+## namespace eval _tcl {
+## proc get_script_folder {} {
+##    set script_path [file normalize [info script]]
+##    set script_folder [file dirname $script_path]
+##    return $script_folder
+## }
+## }
+## variable script_folder
+## set script_folder [_tcl::get_script_folder]
+## set scripts_vivado_version 2020.1
+## set current_vivado_version [version -short]
+## if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
+##    puts ""
+##    catch {common::send_gid_msg -ssname BD::TCL -id 2041 -severity "ERROR" "This script was generated using Vivado <$scripts_vivado_version> and is being run in <$current_vivado_version> of Vivado. Please run the script in Vivado <$scripts_vivado_version> then open the design in Vivado <$current_vivado_version>. Upgrade the design by running \"Tools => Report => Report IP Status...\", then run write_bd_tcl to create an updated script."}
+## 
+##    return 1
+## }
+## set list_projs [get_projects -quiet]
+## if { $list_projs eq "" } {
+##    create_project project_1 myproj -part xc7z010clg400-1
+## }
+## variable design_name
+## set design_name system
+## set errMsg ""
+## set nRet 0
+## set cur_design [current_bd_design -quiet]
+## set list_cells [get_bd_cells -quiet]
+## if { ${design_name} eq "" } {
+##    # USE CASES:
+##    #    1) Design_name not set
+## 
+##    set errMsg "Please set the variable <design_name> to a non-empty value."
+##    set nRet 1
+## 
+## } elseif { ${cur_design} ne "" && ${list_cells} eq "" } {
+##    # USE CASES:
+##    #    2): Current design opened AND is empty AND names same.
+##    #    3): Current design opened AND is empty AND names diff; design_name NOT in project.
+##    #    4): Current design opened AND is empty AND names diff; design_name exists in project.
+## 
+##    if { $cur_design ne $design_name } {
+##       common::send_gid_msg -ssname BD::TCL -id 2001 -severity "INFO" "Changing value of <design_name> from <$design_name> to <$cur_design> since current design is empty."
+##       set design_name [get_property NAME $cur_design]
+##    }
+##    common::send_gid_msg -ssname BD::TCL -id 2002 -severity "INFO" "Constructing design in IPI design <$cur_design>..."
+## 
+## } elseif { ${cur_design} ne "" && $list_cells ne "" && $cur_design eq $design_name } {
+##    # USE CASES:
+##    #    5) Current design opened AND has components AND same names.
+## 
+##    set errMsg "Design <$design_name> already exists in your project, please set the variable <design_name> to another value."
+##    set nRet 1
+## } elseif { [get_files -quiet ${design_name}.bd] ne "" } {
+##    # USE CASES: 
+##    #    6) Current opened design, has components, but diff names, design_name exists in project.
+##    #    7) No opened design, design_name exists in project.
+## 
+##    set errMsg "Design <$design_name> already exists in your project, please set the variable <design_name> to another value."
+##    set nRet 2
+## 
+## } else {
+##    # USE CASES:
+##    #    8) No opened design, design_name not in project.
+##    #    9) Current opened design, has components, but diff names, design_name not in project.
+## 
+##    common::send_gid_msg -ssname BD::TCL -id 2003 -severity "INFO" "Currently there is no design <$design_name> in project, so creating one..."
+## 
+##    create_bd_design $design_name
+## 
+##    common::send_gid_msg -ssname BD::TCL -id 2004 -severity "INFO" "Making design <$design_name> as current_bd_design."
+##    current_bd_design $design_name
+## 
+## }
+INFO: [BD::TCL 103-2003] Currently there is no design <system> in project, so creating one...
+Wrote  : </home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd> 
+INFO: [BD::TCL 103-2004] Making design <system> as current_bd_design.
+## common::send_gid_msg -ssname BD::TCL -id 2005 -severity "INFO" "Currently the variable <design_name> is equal to \"$design_name\"."
+INFO: [BD::TCL 103-2005] Currently the variable <design_name> is equal to "system".
+## if { $nRet != 0 } {
+##    catch {common::send_gid_msg -ssname BD::TCL -id 2006 -severity "ERROR" $errMsg}
+##    return $nRet
+## }
+## set bCheckIPsPassed 1
+## set bCheckIPs 1
+## if { $bCheckIPs == 1 } {
+##    set list_check_ips "\ 
+## xilinx.com:ip:axi_protocol_converter:2.1\
+## xilinx.com:ip:proc_sys_reset:5.0\
+## xilinx.com:ip:processing_system7:5.5\
+## xilinx.com:ip:xadc_wiz:3.3\
+## xilinx.com:ip:xlconstant:1.1\
+## "
+## 
+##    set list_ips_missing ""
+##    common::send_gid_msg -ssname BD::TCL -id 2011 -severity "INFO" "Checking if the following IPs exist in the project's IP catalog: $list_check_ips ."
+## 
+##    foreach ip_vlnv $list_check_ips {
+##       set ip_obj [get_ipdefs -all $ip_vlnv]
+##       if { $ip_obj eq "" } {
+##          lappend list_ips_missing $ip_vlnv
+##       }
+##    }
+## 
+##    if { $list_ips_missing ne "" } {
+##       catch {common::send_gid_msg -ssname BD::TCL -id 2012 -severity "ERROR" "The following IPs are not found in the IP Catalog:\n  $list_ips_missing\n\nResolution: Please add the repository containing the IP(s) to the project." }
+##       set bCheckIPsPassed 0
+##    }
+## 
+## }
+INFO: [BD::TCL 103-2011] Checking if the following IPs exist in the project's IP catalog:  
+xilinx.com:ip:axi_protocol_converter:2.1 xilinx.com:ip:proc_sys_reset:5.0 xilinx.com:ip:processing_system7:5.5 xilinx.com:ip:xadc_wiz:3.3 xilinx.com:ip:xlconstant:1.1  .
+## if { $bCheckIPsPassed != 1 } {
+##   common::send_gid_msg -ssname BD::TCL -id 2023 -severity "WARNING" "Will not continue with creation of design due to the error(s) above."
+##   return 3
+## }
+## proc create_root_design { parentCell } {
+## 
+##   variable script_folder
+##   variable design_name
+## 
+##   if { $parentCell eq "" } {
+##      set parentCell [get_bd_cells /]
+##   }
+## 
+##   # Get object for parentCell
+##   set parentObj [get_bd_cells $parentCell]
+##   if { $parentObj == "" } {
+##      catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
+##      return
+##   }
+## 
+##   # Make sure parentObj is hier blk
+##   set parentType [get_property TYPE $parentObj]
+##   if { $parentType ne "hier" } {
+##      catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+##      return
+##   }
+## 
+##   # Save current instance; Restore later
+##   set oldCurInst [current_bd_instance .]
+## 
+##   # Set parent object as current
+##   current_bd_instance $parentObj
+## 
+## 
+##   # Create interface ports
+##   set DDR [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:ddrx_rtl:1.0 DDR ]
+##   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
+##   set GPIO [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 GPIO ]
+##   set M_AXI_GP0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 M_AXI_GP0 ]
+##   set_property -dict [ list \
+##    CONFIG.ADDR_WIDTH {32} \
+##    CONFIG.DATA_WIDTH {32} \
+##    CONFIG.FREQ_HZ {125000000} \
+##    CONFIG.PROTOCOL {AXI3} \
+##    ] $M_AXI_GP0
+## 
+##   set SPI0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:spi_rtl:1.0 SPI0 ]
+##   set S_AXI_HP0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S_AXI_HP0 ]
+##   set_property -dict [ list \
+##    CONFIG.ADDR_WIDTH {32} \
+##    CONFIG.ARUSER_WIDTH {0} \
+##    CONFIG.AWUSER_WIDTH {0} \
+##    CONFIG.BUSER_WIDTH {0} \
+##    CONFIG.DATA_WIDTH {64} \
+##    CONFIG.FREQ_HZ {125000000} \
+##    CONFIG.HAS_BRESP {1} \
+##    CONFIG.HAS_BURST {1} \
+##    CONFIG.HAS_CACHE {1} \
+##    CONFIG.HAS_LOCK {1} \
+##    CONFIG.HAS_PROT {1} \
+##    CONFIG.HAS_QOS {1} \
+##    CONFIG.HAS_REGION {1} \
+##    CONFIG.HAS_RRESP {1} \
+##    CONFIG.HAS_WSTRB {1} \
+##    CONFIG.ID_WIDTH {4} \
+##    CONFIG.MAX_BURST_LENGTH {16} \
+##    CONFIG.NUM_READ_OUTSTANDING {1} \
+##    CONFIG.NUM_READ_THREADS {1} \
+##    CONFIG.NUM_WRITE_OUTSTANDING {1} \
+##    CONFIG.NUM_WRITE_THREADS {1} \
+##    CONFIG.PHASE {0.000} \
+##    CONFIG.PROTOCOL {AXI3} \
+##    CONFIG.READ_WRITE_MODE {READ_WRITE} \
+##    CONFIG.RUSER_BITS_PER_BYTE {0} \
+##    CONFIG.RUSER_WIDTH {0} \
+##    CONFIG.SUPPORTS_NARROW_BURST {1} \
+##    CONFIG.WUSER_BITS_PER_BYTE {0} \
+##    CONFIG.WUSER_WIDTH {0} \
+##    ] $S_AXI_HP0
+## 
+##   set S_AXI_HP1 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S_AXI_HP1 ]
+##   set_property -dict [ list \
+##    CONFIG.ADDR_WIDTH {32} \
+##    CONFIG.ARUSER_WIDTH {0} \
+##    CONFIG.AWUSER_WIDTH {0} \
+##    CONFIG.BUSER_WIDTH {0} \
+##    CONFIG.DATA_WIDTH {64} \
+##    CONFIG.FREQ_HZ {125000000} \
+##    CONFIG.HAS_BRESP {1} \
+##    CONFIG.HAS_BURST {1} \
+##    CONFIG.HAS_CACHE {1} \
+##    CONFIG.HAS_LOCK {1} \
+##    CONFIG.HAS_PROT {1} \
+##    CONFIG.HAS_QOS {1} \
+##    CONFIG.HAS_REGION {1} \
+##    CONFIG.HAS_RRESP {1} \
+##    CONFIG.HAS_WSTRB {1} \
+##    CONFIG.ID_WIDTH {4} \
+##    CONFIG.MAX_BURST_LENGTH {16} \
+##    CONFIG.NUM_READ_OUTSTANDING {1} \
+##    CONFIG.NUM_READ_THREADS {1} \
+##    CONFIG.NUM_WRITE_OUTSTANDING {1} \
+##    CONFIG.NUM_WRITE_THREADS {1} \
+##    CONFIG.PHASE {0.000} \
+##    CONFIG.PROTOCOL {AXI3} \
+##    CONFIG.READ_WRITE_MODE {READ_WRITE} \
+##    CONFIG.RUSER_BITS_PER_BYTE {0} \
+##    CONFIG.RUSER_WIDTH {0} \
+##    CONFIG.SUPPORTS_NARROW_BURST {1} \
+##    CONFIG.WUSER_BITS_PER_BYTE {0} \
+##    CONFIG.WUSER_WIDTH {0} \
+##    ] $S_AXI_HP1
+## 
+##   set S_AXI_HP2 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S_AXI_HP2 ]
+##   set_property -dict [ list \
+##    CONFIG.ADDR_WIDTH {32} \
+##    CONFIG.ARUSER_WIDTH {0} \
+##    CONFIG.AWUSER_WIDTH {0} \
+##    CONFIG.BUSER_WIDTH {0} \
+##    CONFIG.DATA_WIDTH {64} \
+##    CONFIG.FREQ_HZ {125000000} \
+##    CONFIG.HAS_BRESP {1} \
+##    CONFIG.HAS_BURST {1} \
+##    CONFIG.HAS_CACHE {1} \
+##    CONFIG.HAS_LOCK {1} \
+##    CONFIG.HAS_PROT {1} \
+##    CONFIG.HAS_QOS {1} \
+##    CONFIG.HAS_REGION {1} \
+##    CONFIG.HAS_RRESP {1} \
+##    CONFIG.HAS_WSTRB {1} \
+##    CONFIG.ID_WIDTH {4} \
+##    CONFIG.MAX_BURST_LENGTH {16} \
+##    CONFIG.NUM_READ_OUTSTANDING {1} \
+##    CONFIG.NUM_READ_THREADS {1} \
+##    CONFIG.NUM_WRITE_OUTSTANDING {1} \
+##    CONFIG.NUM_WRITE_THREADS {1} \
+##    CONFIG.PHASE {0.000} \
+##    CONFIG.PROTOCOL {AXI3} \
+##    CONFIG.READ_WRITE_MODE {READ_WRITE} \
+##    CONFIG.RUSER_BITS_PER_BYTE {0} \
+##    CONFIG.RUSER_WIDTH {0} \
+##    CONFIG.SUPPORTS_NARROW_BURST {1} \
+##    CONFIG.WUSER_BITS_PER_BYTE {0} \
+##    CONFIG.WUSER_WIDTH {0} \
+##    ] $S_AXI_HP2
+## 
+##   set S_AXI_HP3 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S_AXI_HP3 ]
+##   set_property -dict [ list \
+##    CONFIG.ADDR_WIDTH {32} \
+##    CONFIG.ARUSER_WIDTH {0} \
+##    CONFIG.AWUSER_WIDTH {0} \
+##    CONFIG.BUSER_WIDTH {0} \
+##    CONFIG.DATA_WIDTH {64} \
+##    CONFIG.FREQ_HZ {125000000} \
+##    CONFIG.HAS_BRESP {1} \
+##    CONFIG.HAS_BURST {1} \
+##    CONFIG.HAS_CACHE {1} \
+##    CONFIG.HAS_LOCK {1} \
+##    CONFIG.HAS_PROT {1} \
+##    CONFIG.HAS_QOS {1} \
+##    CONFIG.HAS_REGION {1} \
+##    CONFIG.HAS_RRESP {1} \
+##    CONFIG.HAS_WSTRB {1} \
+##    CONFIG.ID_WIDTH {4} \
+##    CONFIG.MAX_BURST_LENGTH {16} \
+##    CONFIG.NUM_READ_OUTSTANDING {1} \
+##    CONFIG.NUM_READ_THREADS {1} \
+##    CONFIG.NUM_WRITE_OUTSTANDING {1} \
+##    CONFIG.NUM_WRITE_THREADS {1} \
+##    CONFIG.PHASE {0.000} \
+##    CONFIG.PROTOCOL {AXI3} \
+##    CONFIG.READ_WRITE_MODE {READ_WRITE} \
+##    CONFIG.RUSER_BITS_PER_BYTE {0} \
+##    CONFIG.RUSER_WIDTH {0} \
+##    CONFIG.SUPPORTS_NARROW_BURST {1} \
+##    CONFIG.WUSER_BITS_PER_BYTE {0} \
+##    CONFIG.WUSER_WIDTH {0} \
+##    ] $S_AXI_HP3   
+## 
+##   set Vaux0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vaux0 ]
+##   set Vaux1 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vaux1 ]
+##   set Vaux8 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vaux8 ]
+##   set Vaux9 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vaux9 ]
+##   set Vp_Vn [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vp_Vn ]
+## 
+##   # Create ports
+##   set FCLK_CLK0 [ create_bd_port -dir O -type clk FCLK_CLK0 ]
+##   set FCLK_CLK1 [ create_bd_port -dir O -type clk FCLK_CLK1 ]
+##   set FCLK_CLK2 [ create_bd_port -dir O -type clk FCLK_CLK2 ]
+##   set FCLK_CLK3 [ create_bd_port -dir O -type clk FCLK_CLK3 ]
+##   set FCLK_RESET0_N [ create_bd_port -dir O -type rst FCLK_RESET0_N ]
+##   set FCLK_RESET1_N [ create_bd_port -dir O -type rst FCLK_RESET1_N ]
+##   set FCLK_RESET2_N [ create_bd_port -dir O -type rst FCLK_RESET2_N ]
+##   set FCLK_RESET3_N [ create_bd_port -dir O -type rst FCLK_RESET3_N ]
+##   set M_AXI_GP0_ACLK [ create_bd_port -dir I -type clk -freq_hz 125000000 M_AXI_GP0_ACLK ]
+##   set_property -dict [ list \
+##    CONFIG.ASSOCIATED_BUSIF {M_AXI_GP0} \
+##  ] $M_AXI_GP0_ACLK
+##   set S_AXI_HP0_aclk [ create_bd_port -dir I -type clk -freq_hz 125000000 S_AXI_HP0_aclk ]
+##   set S_AXI_HP1_aclk [ create_bd_port -dir I -type clk -freq_hz 125000000 S_AXI_HP1_aclk ]
+##   set S_AXI_HP2_aclk [ create_bd_port -dir I -type clk -freq_hz 125000000 S_AXI_HP2_aclk ]
+##   set S_AXI_HP3_aclk [ create_bd_port -dir I -type clk -freq_hz 125000000 S_AXI_HP3_aclk ]
+## 
+##   # Create instance: axi_protocol_converter_0, and set properties
+##   set axi_protocol_converter_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_protocol_converter:2.1 axi_protocol_converter_0 ]
+## 
+##   # Create instance: proc_sys_reset, and set properties
+##   set proc_sys_reset [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset ]
+##   set_property -dict [ list \
+##    CONFIG.C_EXT_RST_WIDTH {1} \
+##  ] $proc_sys_reset
+## 
+##    create_bd_cell -type ip -vlnv xilinx.com:ip:axi_register_slice:2.1 axi_register_slice_0
+## 
+##   # Create instance: processing_system7, and set properties
+##   set processing_system7 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7 ]
+##   set_property -dict [ list \
+##    CONFIG.PCW_ACT_APU_PERIPHERAL_FREQMHZ {666.666687} \
+##    CONFIG.PCW_ACT_CAN_PERIPHERAL_FREQMHZ {10.000000} \
+##    CONFIG.PCW_ACT_DCI_PERIPHERAL_FREQMHZ {10.158730} \
+##    CONFIG.PCW_ACT_ENET0_PERIPHERAL_FREQMHZ {125.000000} \
+##    CONFIG.PCW_ACT_ENET1_PERIPHERAL_FREQMHZ {10.000000} \
+##    CONFIG.PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ {125.000000} \
+##    CONFIG.PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ {250.000000} \
+##    CONFIG.PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ {50.000000} \
+##    CONFIG.PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ {200.000000} \
+##    CONFIG.PCW_ACT_PCAP_PERIPHERAL_FREQMHZ {200.000000} \
+##    CONFIG.PCW_ACT_QSPI_PERIPHERAL_FREQMHZ {125.000000} \
+##    CONFIG.PCW_ACT_SDIO_PERIPHERAL_FREQMHZ {100.000000} \
+##    CONFIG.PCW_ACT_SMC_PERIPHERAL_FREQMHZ {10.000000} \
+##    CONFIG.PCW_ACT_SPI_PERIPHERAL_FREQMHZ {200.000000} \
+##    CONFIG.PCW_ACT_TPIU_PERIPHERAL_FREQMHZ {200.000000} \
+##    CONFIG.PCW_ACT_TTC0_CLK0_PERIPHERAL_FREQMHZ {111.111115} \
+##    CONFIG.PCW_ACT_TTC0_CLK1_PERIPHERAL_FREQMHZ {111.111115} \
+##    CONFIG.PCW_ACT_TTC0_CLK2_PERIPHERAL_FREQMHZ {111.111115} \
+##    CONFIG.PCW_ACT_TTC1_CLK0_PERIPHERAL_FREQMHZ {111.111115} \
+##    CONFIG.PCW_ACT_TTC1_CLK1_PERIPHERAL_FREQMHZ {111.111115} \
+##    CONFIG.PCW_ACT_TTC1_CLK2_PERIPHERAL_FREQMHZ {111.111115} \
+##    CONFIG.PCW_ACT_UART_PERIPHERAL_FREQMHZ {100.000000} \
+##    CONFIG.PCW_ACT_WDT_PERIPHERAL_FREQMHZ {111.111115} \
+##    CONFIG.PCW_ARMPLL_CTRL_FBDIV {40} \
+##    CONFIG.PCW_CAN_PERIPHERAL_DIVISOR0 {1} \
+##    CONFIG.PCW_CAN_PERIPHERAL_DIVISOR1 {1} \
+##    CONFIG.PCW_CLK0_FREQ {125000000} \
+##    CONFIG.PCW_CLK1_FREQ {250000000} \
+##    CONFIG.PCW_CLK2_FREQ {50000000} \
+##    CONFIG.PCW_CLK3_FREQ {200000000} \
+##    CONFIG.PCW_CPU_CPU_PLL_FREQMHZ {1333.333} \
+##    CONFIG.PCW_CPU_PERIPHERAL_DIVISOR0 {2} \
+##    CONFIG.PCW_DCI_PERIPHERAL_DIVISOR0 {15} \
+##    CONFIG.PCW_DCI_PERIPHERAL_DIVISOR1 {7} \
+##    CONFIG.PCW_DDRPLL_CTRL_FBDIV {32} \
+##    CONFIG.PCW_DDR_DDR_PLL_FREQMHZ {1066.667} \
+##    CONFIG.PCW_DDR_PERIPHERAL_DIVISOR0 {2} \
+##    CONFIG.PCW_DDR_RAM_HIGHADDR {0x1FFFFFFF} \
+##    CONFIG.PCW_ENET0_ENET0_IO {MIO 16 .. 27} \
+##    CONFIG.PCW_ENET0_GRP_MDIO_ENABLE {1} \
+##    CONFIG.PCW_ENET0_GRP_MDIO_IO {MIO 52 .. 53} \
+##    CONFIG.PCW_ENET0_PERIPHERAL_CLKSRC {IO PLL} \
+##    CONFIG.PCW_ENET0_PERIPHERAL_DIVISOR0 {8} \
+##    CONFIG.PCW_ENET0_PERIPHERAL_DIVISOR1 {1} \
+##    CONFIG.PCW_ENET0_PERIPHERAL_ENABLE {1} \
+##    CONFIG.PCW_ENET0_PERIPHERAL_FREQMHZ {1000 Mbps} \
+##    CONFIG.PCW_ENET0_RESET_ENABLE {0} \
+##    CONFIG.PCW_ENET1_PERIPHERAL_DIVISOR0 {1} \
+##    CONFIG.PCW_ENET1_PERIPHERAL_DIVISOR1 {1} \
+##    CONFIG.PCW_ENET1_RESET_ENABLE {0} \
+##    CONFIG.PCW_ENET_RESET_ENABLE {1} \
+##    CONFIG.PCW_ENET_RESET_SELECT {Share reset pin} \
+##    CONFIG.PCW_EN_CLK1_PORT {1} \
+##    CONFIG.PCW_EN_CLK2_PORT {1} \
+##    CONFIG.PCW_EN_CLK3_PORT {1} \
+##    CONFIG.PCW_EN_EMIO_GPIO {1} \
+##    CONFIG.PCW_EN_EMIO_SPI0 {1} \
+##    CONFIG.PCW_EN_EMIO_SPI1 {0} \
+##    CONFIG.PCW_EN_EMIO_TTC0 {1} \
+##    CONFIG.PCW_EN_EMIO_UART0 {0} \
+##    CONFIG.PCW_EN_ENET0 {1} \
+##    CONFIG.PCW_EN_GPIO {1} \
+##    CONFIG.PCW_EN_I2C0 {1} \
+##    CONFIG.PCW_EN_QSPI {1} \
+##    CONFIG.PCW_EN_RST1_PORT {1} \
+##    CONFIG.PCW_EN_RST2_PORT {1} \
+##    CONFIG.PCW_EN_RST3_PORT {1} \
+##    CONFIG.PCW_EN_SDIO0 {1} \
+##    CONFIG.PCW_EN_SPI0 {1} \
+##    CONFIG.PCW_EN_SPI1 {1} \
+##    CONFIG.PCW_EN_TTC0 {1} \
+##    CONFIG.PCW_EN_UART0 {1} \
+##    CONFIG.PCW_EN_UART1 {1} \
+##    CONFIG.PCW_EN_USB0 {1} \
+##    CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0 {4} \
+##    CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR1 {2} \
+##    CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR0 {2} \
+##    CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR1 {2} \
+##    CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR0 {5} \
+##    CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR1 {4} \
+##    CONFIG.PCW_FCLK3_PERIPHERAL_DIVISOR0 {5} \
+##    CONFIG.PCW_FCLK3_PERIPHERAL_DIVISOR1 {1} \
+##    CONFIG.PCW_FCLK_CLK1_BUF {TRUE} \
+##    CONFIG.PCW_FCLK_CLK2_BUF {TRUE} \
+##    CONFIG.PCW_FCLK_CLK3_BUF {TRUE} \
+##    CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {125} \
+##    CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {250} \
+##    CONFIG.PCW_FPGA3_PERIPHERAL_FREQMHZ {200} \
+##    CONFIG.PCW_FPGA_FCLK0_ENABLE {1} \
+##    CONFIG.PCW_FPGA_FCLK1_ENABLE {1} \
+##    CONFIG.PCW_FPGA_FCLK2_ENABLE {1} \
+##    CONFIG.PCW_FPGA_FCLK3_ENABLE {1} \
+##    CONFIG.PCW_GPIO_EMIO_GPIO_ENABLE {1} \
+##    CONFIG.PCW_GPIO_EMIO_GPIO_IO {24} \
+##    CONFIG.PCW_GPIO_EMIO_GPIO_WIDTH {24} \
+##    CONFIG.PCW_GPIO_MIO_GPIO_ENABLE {1} \
+##    CONFIG.PCW_GPIO_MIO_GPIO_IO {MIO} \
+##    CONFIG.PCW_I2C0_GRP_INT_ENABLE {0} \
+##    CONFIG.PCW_I2C0_I2C0_IO {MIO 50 .. 51} \
+##    CONFIG.PCW_I2C0_PERIPHERAL_ENABLE {1} \
+##    CONFIG.PCW_I2C0_RESET_ENABLE {0} \
+##    CONFIG.PCW_I2C1_RESET_ENABLE {0} \
+##    CONFIG.PCW_I2C_PERIPHERAL_FREQMHZ {111.111115} \
+##    CONFIG.PCW_I2C_RESET_ENABLE {1} \
+##    CONFIG.PCW_I2C_RESET_SELECT {Share reset pin} \
+##    CONFIG.PCW_IOPLL_CTRL_FBDIV {30} \
+##    CONFIG.PCW_IO_IO_PLL_FREQMHZ {1000.000} \
+##    CONFIG.PCW_IRQ_F2P_INTR {1} \
+##    CONFIG.PCW_MIO_0_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_0_IOTYPE {LVCMOS 3.3V} \
+##    CONFIG.PCW_MIO_0_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_0_SLEW {slow} \
+##    CONFIG.PCW_MIO_10_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_10_IOTYPE {LVCMOS 3.3V} \
+##    CONFIG.PCW_MIO_10_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_10_SLEW {slow} \
+##    CONFIG.PCW_MIO_11_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_11_IOTYPE {LVCMOS 3.3V} \
+##    CONFIG.PCW_MIO_11_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_11_SLEW {slow} \
+##    CONFIG.PCW_MIO_12_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_12_IOTYPE {LVCMOS 3.3V} \
+##    CONFIG.PCW_MIO_12_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_12_SLEW {slow} \
+##    CONFIG.PCW_MIO_13_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_13_IOTYPE {LVCMOS 3.3V} \
+##    CONFIG.PCW_MIO_13_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_13_SLEW {slow} \
+##    CONFIG.PCW_MIO_14_DIRECTION {in} \
+##    CONFIG.PCW_MIO_14_IOTYPE {LVCMOS 3.3V} \
+##    CONFIG.PCW_MIO_14_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_14_SLEW {slow} \
+##    CONFIG.PCW_MIO_15_DIRECTION {out} \
+##    CONFIG.PCW_MIO_15_IOTYPE {LVCMOS 3.3V} \
+##    CONFIG.PCW_MIO_15_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_15_SLEW {slow} \
+##    CONFIG.PCW_MIO_16_DIRECTION {out} \
+##    CONFIG.PCW_MIO_16_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_16_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_16_SLEW {fast} \
+##    CONFIG.PCW_MIO_17_DIRECTION {out} \
+##    CONFIG.PCW_MIO_17_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_17_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_17_SLEW {fast} \
+##    CONFIG.PCW_MIO_18_DIRECTION {out} \
+##    CONFIG.PCW_MIO_18_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_18_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_18_SLEW {fast} \
+##    CONFIG.PCW_MIO_19_DIRECTION {out} \
+##    CONFIG.PCW_MIO_19_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_19_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_19_SLEW {fast} \
+##    CONFIG.PCW_MIO_1_DIRECTION {out} \
+##    CONFIG.PCW_MIO_1_IOTYPE {LVCMOS 3.3V} \
+##    CONFIG.PCW_MIO_1_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_1_SLEW {slow} \
+##    CONFIG.PCW_MIO_20_DIRECTION {out} \
+##    CONFIG.PCW_MIO_20_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_20_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_20_SLEW {fast} \
+##    CONFIG.PCW_MIO_21_DIRECTION {out} \
+##    CONFIG.PCW_MIO_21_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_21_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_21_SLEW {fast} \
+##    CONFIG.PCW_MIO_22_DIRECTION {in} \
+##    CONFIG.PCW_MIO_22_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_22_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_22_SLEW {fast} \
+##    CONFIG.PCW_MIO_23_DIRECTION {in} \
+##    CONFIG.PCW_MIO_23_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_23_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_23_SLEW {fast} \
+##    CONFIG.PCW_MIO_24_DIRECTION {in} \
+##    CONFIG.PCW_MIO_24_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_24_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_24_SLEW {fast} \
+##    CONFIG.PCW_MIO_25_DIRECTION {in} \
+##    CONFIG.PCW_MIO_25_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_25_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_25_SLEW {fast} \
+##    CONFIG.PCW_MIO_26_DIRECTION {in} \
+##    CONFIG.PCW_MIO_26_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_26_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_26_SLEW {fast} \
+##    CONFIG.PCW_MIO_27_DIRECTION {in} \
+##    CONFIG.PCW_MIO_27_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_27_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_27_SLEW {fast} \
+##    CONFIG.PCW_MIO_28_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_28_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_28_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_28_SLEW {fast} \
+##    CONFIG.PCW_MIO_29_DIRECTION {in} \
+##    CONFIG.PCW_MIO_29_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_29_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_29_SLEW {fast} \
+##    CONFIG.PCW_MIO_2_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_2_IOTYPE {LVCMOS 3.3V} \
+##    CONFIG.PCW_MIO_2_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_2_SLEW {slow} \
+##    CONFIG.PCW_MIO_30_DIRECTION {out} \
+##    CONFIG.PCW_MIO_30_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_30_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_30_SLEW {fast} \
+##    CONFIG.PCW_MIO_31_DIRECTION {in} \
+##    CONFIG.PCW_MIO_31_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_31_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_31_SLEW {fast} \
+##    CONFIG.PCW_MIO_32_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_32_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_32_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_32_SLEW {fast} \
+##    CONFIG.PCW_MIO_33_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_33_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_33_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_33_SLEW {fast} \
+##    CONFIG.PCW_MIO_34_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_34_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_34_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_34_SLEW {fast} \
+##    CONFIG.PCW_MIO_35_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_35_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_35_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_35_SLEW {fast} \
+##    CONFIG.PCW_MIO_36_DIRECTION {in} \
+##    CONFIG.PCW_MIO_36_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_36_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_36_SLEW {fast} \
+##    CONFIG.PCW_MIO_37_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_37_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_37_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_37_SLEW {fast} \
+##    CONFIG.PCW_MIO_38_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_38_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_38_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_38_SLEW {fast} \
+##    CONFIG.PCW_MIO_39_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_39_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_39_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_39_SLEW {fast} \
+##    CONFIG.PCW_MIO_3_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_3_IOTYPE {LVCMOS 3.3V} \
+##    CONFIG.PCW_MIO_3_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_3_SLEW {slow} \
+##    CONFIG.PCW_MIO_40_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_40_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_40_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_40_SLEW {slow} \
+##    CONFIG.PCW_MIO_41_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_41_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_41_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_41_SLEW {slow} \
+##    CONFIG.PCW_MIO_42_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_42_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_42_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_42_SLEW {slow} \
+##    CONFIG.PCW_MIO_43_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_43_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_43_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_43_SLEW {slow} \
+##    CONFIG.PCW_MIO_44_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_44_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_44_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_44_SLEW {slow} \
+##    CONFIG.PCW_MIO_45_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_45_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_45_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_45_SLEW {slow} \
+##    CONFIG.PCW_MIO_46_DIRECTION {in} \
+##    CONFIG.PCW_MIO_46_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_46_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_46_SLEW {slow} \
+##    CONFIG.PCW_MIO_47_DIRECTION {in} \
+##    CONFIG.PCW_MIO_47_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_47_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_47_SLEW {slow} \
+##    CONFIG.PCW_MIO_48_DIRECTION {out} \
+##    CONFIG.PCW_MIO_48_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_48_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_48_SLEW {slow} \
+##    CONFIG.PCW_MIO_49_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_49_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_49_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_49_SLEW {slow} \
+##    CONFIG.PCW_MIO_4_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_4_IOTYPE {LVCMOS 3.3V} \
+##    CONFIG.PCW_MIO_4_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_4_SLEW {slow} \
+##    CONFIG.PCW_MIO_50_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_50_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_50_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_50_SLEW {slow} \
+##    CONFIG.PCW_MIO_51_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_51_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_51_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_51_SLEW {slow} \
+##    CONFIG.PCW_MIO_52_DIRECTION {out} \
+##    CONFIG.PCW_MIO_52_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_52_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_52_SLEW {slow} \
+##    CONFIG.PCW_MIO_53_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_53_IOTYPE {LVCMOS 2.5V} \
+##    CONFIG.PCW_MIO_53_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_53_SLEW {slow} \
+##    CONFIG.PCW_MIO_5_DIRECTION {inout} \
+##    CONFIG.PCW_MIO_5_IOTYPE {LVCMOS 3.3V} \
+##    CONFIG.PCW_MIO_5_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_5_SLEW {slow} \
+##    CONFIG.PCW_MIO_6_DIRECTION {out} \
+##    CONFIG.PCW_MIO_6_IOTYPE {LVCMOS 3.3V} \
+##    CONFIG.PCW_MIO_6_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_6_SLEW {slow} \
+##    CONFIG.PCW_MIO_7_DIRECTION {out} \
+##    CONFIG.PCW_MIO_7_IOTYPE {LVCMOS 3.3V} \
+##    CONFIG.PCW_MIO_7_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_7_SLEW {slow} \
+##    CONFIG.PCW_MIO_8_DIRECTION {out} \
+##    CONFIG.PCW_MIO_8_IOTYPE {LVCMOS 3.3V} \
+##    CONFIG.PCW_MIO_8_PULLUP {disabled} \
+##    CONFIG.PCW_MIO_8_SLEW {slow} \
+##    CONFIG.PCW_MIO_9_DIRECTION {in} \
+##    CONFIG.PCW_MIO_9_IOTYPE {LVCMOS 3.3V} \
+##    CONFIG.PCW_MIO_9_PULLUP {enabled} \
+##    CONFIG.PCW_MIO_9_SLEW {slow} \
+##    CONFIG.PCW_MIO_TREE_PERIPHERALS {GPIO#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#GPIO#UART 1#UART 1#SPI 1#SPI 1#SPI 1#SPI 1#UART 0#UART 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#USB Reset#GPIO#I2C 0#I2C 0#Enet 0#Enet 0} \
+##    CONFIG.PCW_MIO_TREE_SIGNALS {gpio[0]#qspi0_ss_b#qspi0_io[0]#qspi0_io[1]#qspi0_io[2]#qspi0_io[3]/HOLD_B#qspi0_sclk#gpio[7]#tx#rx#mosi#miso#sclk#ss[0]#rx#tx#tx_clk#txd[0]#txd[1]#txd[2]#txd[3]#tx_ctl#rx_clk#rxd[0]#rxd[1]#rxd[2]#rxd[3]#rx_ctl#data[4]#dir#stp#nxt#data[0]#data[1]#data[2]#data[3]#clk#data[5]#data[6]#data[7]#clk#cmd#data[0]#data[1]#data[2]#data[3]#cd#wp#reset#gpio[49]#scl#sda#mdc#mdio} \
+##    CONFIG.PCW_NAND_GRP_D8_ENABLE {0} \
+##    CONFIG.PCW_NAND_PERIPHERAL_ENABLE {0} \
+##    CONFIG.PCW_NOR_GRP_A25_ENABLE {0} \
+##    CONFIG.PCW_NOR_GRP_CS0_ENABLE {0} \
+##    CONFIG.PCW_NOR_GRP_CS1_ENABLE {0} \
+##    CONFIG.PCW_NOR_GRP_SRAM_CS0_ENABLE {0} \
+##    CONFIG.PCW_NOR_GRP_SRAM_CS1_ENABLE {0} \
+##    CONFIG.PCW_NOR_GRP_SRAM_INT_ENABLE {0} \
+##    CONFIG.PCW_NOR_PERIPHERAL_ENABLE {0} \
+##    CONFIG.PCW_PCAP_PERIPHERAL_DIVISOR0 {5} \
+##    CONFIG.PCW_PRESET_BANK1_VOLTAGE {LVCMOS 2.5V} \
+##    CONFIG.PCW_QSPI_GRP_FBCLK_ENABLE {0} \
+##    CONFIG.PCW_QSPI_GRP_IO1_ENABLE {0} \
+##    CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} \
+##    CONFIG.PCW_QSPI_GRP_SINGLE_SS_IO {MIO 1 .. 6} \
+##    CONFIG.PCW_QSPI_GRP_SS1_ENABLE {0} \
+##    CONFIG.PCW_QSPI_PERIPHERAL_CLKSRC {IO PLL} \
+##    CONFIG.PCW_QSPI_PERIPHERAL_DIVISOR0 {8} \
+##    CONFIG.PCW_QSPI_PERIPHERAL_ENABLE {1} \
+##    CONFIG.PCW_QSPI_PERIPHERAL_FREQMHZ {125} \
+##    CONFIG.PCW_QSPI_QSPI_IO {MIO 1 .. 6} \
+##    CONFIG.PCW_SD0_GRP_CD_ENABLE {1} \
+##    CONFIG.PCW_SD0_GRP_CD_IO {MIO 46} \
+##    CONFIG.PCW_SD0_GRP_POW_ENABLE {0} \
+##    CONFIG.PCW_SD0_GRP_WP_ENABLE {1} \
+##    CONFIG.PCW_SD0_GRP_WP_IO {MIO 47} \
+##    CONFIG.PCW_SD0_PERIPHERAL_ENABLE {1} \
+##    CONFIG.PCW_SD0_SD0_IO {MIO 40 .. 45} \
+##    CONFIG.PCW_SDIO_PERIPHERAL_DIVISOR0 {10} \
+##    CONFIG.PCW_SDIO_PERIPHERAL_FREQMHZ {100} \
+##    CONFIG.PCW_SDIO_PERIPHERAL_VALID {1} \
+##    CONFIG.PCW_SINGLE_QSPI_DATA_MODE {x4} \
+##    CONFIG.PCW_SMC_PERIPHERAL_DIVISOR0 {1} \
+##    CONFIG.PCW_SPI0_GRP_SS0_ENABLE {1} \
+##    CONFIG.PCW_SPI0_GRP_SS0_IO {EMIO} \
+##    CONFIG.PCW_SPI0_GRP_SS1_ENABLE {1} \
+##    CONFIG.PCW_SPI0_GRP_SS1_IO {EMIO} \
+##    CONFIG.PCW_SPI0_GRP_SS2_ENABLE {1} \
+##    CONFIG.PCW_SPI0_GRP_SS2_IO {EMIO} \
+##    CONFIG.PCW_SPI0_PERIPHERAL_ENABLE {1} \
+##    CONFIG.PCW_SPI0_SPI0_IO {EMIO} \
+##    CONFIG.PCW_SPI1_GRP_SS0_ENABLE {1} \
+##    CONFIG.PCW_SPI1_GRP_SS0_IO {MIO 13} \
+##    CONFIG.PCW_SPI1_GRP_SS1_ENABLE {0} \
+##    CONFIG.PCW_SPI1_GRP_SS2_ENABLE {0} \
+##    CONFIG.PCW_SPI1_PERIPHERAL_ENABLE {1} \
+##    CONFIG.PCW_SPI1_SPI1_IO {MIO 10 .. 15} \
+##    CONFIG.PCW_SPI_PERIPHERAL_DIVISOR0 {5} \
+##    CONFIG.PCW_SPI_PERIPHERAL_FREQMHZ {200} \
+##    CONFIG.PCW_SPI_PERIPHERAL_VALID {1} \
+##    CONFIG.PCW_TPIU_PERIPHERAL_DIVISOR0 {1} \
+##    CONFIG.PCW_TTC0_CLK0_PERIPHERAL_FREQMHZ {133.333333} \
+##    CONFIG.PCW_TTC0_CLK1_PERIPHERAL_FREQMHZ {133.333333} \
+##    CONFIG.PCW_TTC0_CLK2_PERIPHERAL_FREQMHZ {133.333333} \
+##    CONFIG.PCW_TTC0_PERIPHERAL_ENABLE {1} \
+##    CONFIG.PCW_TTC0_TTC0_IO {EMIO} \
+##    CONFIG.PCW_TTC_PERIPHERAL_FREQMHZ {50} \
+##    CONFIG.PCW_UART0_GRP_FULL_ENABLE {0} \
+##    CONFIG.PCW_UART0_PERIPHERAL_ENABLE {1} \
+##    CONFIG.PCW_UART0_UART0_IO {MIO 14 .. 15} \
+##    CONFIG.PCW_UART1_GRP_FULL_ENABLE {0} \
+##    CONFIG.PCW_UART1_PERIPHERAL_ENABLE {1} \
+##    CONFIG.PCW_UART1_UART1_IO {MIO 8 .. 9} \
+##    CONFIG.PCW_UART_PERIPHERAL_DIVISOR0 {10} \
+##    CONFIG.PCW_UART_PERIPHERAL_FREQMHZ {100} \
+##    CONFIG.PCW_UART_PERIPHERAL_VALID {1} \
+##    CONFIG.PCW_UIPARAM_ACT_DDR_FREQ_MHZ {533.333374} \
+##    CONFIG.PCW_UIPARAM_DDR_BANK_ADDR_COUNT {3} \
+##    CONFIG.PCW_UIPARAM_DDR_BUS_WIDTH {16 Bit} \
+##    CONFIG.PCW_UIPARAM_DDR_CL {7} \
+##    CONFIG.PCW_UIPARAM_DDR_COL_ADDR_COUNT {10} \
+##    CONFIG.PCW_UIPARAM_DDR_CWL {6} \
+##    CONFIG.PCW_UIPARAM_DDR_DEVICE_CAPACITY {4096 MBits} \
+##    CONFIG.PCW_UIPARAM_DDR_DRAM_WIDTH {16 Bits} \
+##    CONFIG.PCW_UIPARAM_DDR_ECC {Disabled} \
+##    CONFIG.PCW_UIPARAM_DDR_PARTNO {MT41J256M16 RE-125} \
+##    CONFIG.PCW_UIPARAM_DDR_ROW_ADDR_COUNT {15} \
+##    CONFIG.PCW_UIPARAM_DDR_SPEED_BIN {DDR3_1066F} \
+##    CONFIG.PCW_UIPARAM_DDR_T_FAW {40.0} \
+##    CONFIG.PCW_UIPARAM_DDR_T_RAS_MIN {35.0} \
+##    CONFIG.PCW_UIPARAM_DDR_T_RC {48.91} \
+##    CONFIG.PCW_UIPARAM_DDR_T_RCD {7} \
+##    CONFIG.PCW_UIPARAM_DDR_T_RP {7} \
+##    CONFIG.PCW_USB0_PERIPHERAL_ENABLE {1} \
+##    CONFIG.PCW_USB0_PERIPHERAL_FREQMHZ {60} \
+##    CONFIG.PCW_USB0_RESET_ENABLE {1} \
+##    CONFIG.PCW_USB0_RESET_IO {MIO 48} \
+##    CONFIG.PCW_USB0_USB0_IO {MIO 28 .. 39} \
+##    CONFIG.PCW_USB1_RESET_ENABLE {0} \
+##    CONFIG.PCW_USB_RESET_ENABLE {1} \
+##    CONFIG.PCW_USB_RESET_SELECT {Share reset pin} \
+##    CONFIG.PCW_USE_FABRIC_INTERRUPT {1} \
+##    CONFIG.PCW_USE_M_AXI_GP1 {1} \
+##    CONFIG.PCW_USE_S_AXI_GP0 {1} \
+##    CONFIG.PCW_USE_S_AXI_HP0 {1} \
+##    CONFIG.PCW_USE_S_AXI_HP1 {1} \
+##    CONFIG.PCW_USE_S_AXI_HP2 {1} \
+##    CONFIG.PCW_USE_S_AXI_HP3 {1} \
+##    CONFIG.PCW_S_AXI_HP0_DATA_WIDTH {64} \
+##    CONFIG.PCW_S_AXI_HP0_ID_WIDTH {4} \
+##    CONFIG.PCW_S_AXI_HP1_DATA_WIDTH {64} \
+##    CONFIG.PCW_S_AXI_HP1_ID_WIDTH {4} \
+##    CONFIG.PCW_S_AXI_HP2_DATA_WIDTH {64} \
+##    CONFIG.PCW_S_AXI_HP2_ID_WIDTH {4} \
+##    CONFIG.PCW_S_AXI_HP3_DATA_WIDTH {64} \
+##    CONFIG.PCW_S_AXI_HP3_ID_WIDTH {4} \
+##  ] $processing_system7
+## 
+##   # Create instance: xadc, and set properties
+##   set xadc [ create_bd_cell -type ip -vlnv xilinx.com:ip:xadc_wiz:3.3 xadc ]
+##   set_property -dict [ list \
+##    CONFIG.CHANNEL_ENABLE_VAUXP0_VAUXN0 {true} \
+##    CONFIG.CHANNEL_ENABLE_VAUXP1_VAUXN1 {true} \
+##    CONFIG.CHANNEL_ENABLE_VAUXP8_VAUXN8 {true} \
+##    CONFIG.CHANNEL_ENABLE_VAUXP9_VAUXN9 {true} \
+##    CONFIG.CHANNEL_ENABLE_VP_VN {true} \
+##    CONFIG.ENABLE_AXI4STREAM {false} \
+##    CONFIG.ENABLE_RESET {false} \
+##    CONFIG.EXTERNAL_MUX_CHANNEL {VP_VN} \
+##    CONFIG.INTERFACE_SELECTION {Enable_AXI} \
+##    CONFIG.SEQUENCER_MODE {Off} \
+##    CONFIG.SINGLE_CHANNEL_SELECTION {TEMPERATURE} \
+##    CONFIG.XADC_STARUP_SELECTION {independent_adc} \
+##  ] $xadc
+## 
+##   # Create instance: xlconstant, and set properties
+##   set xlconstant [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant ]
+## 
+##   # Create interface connections
+##   connect_bd_intf_net -intf_net Vaux0_1 [get_bd_intf_ports Vaux0] [get_bd_intf_pins xadc/Vaux0]
+##   connect_bd_intf_net -intf_net Vaux1_1 [get_bd_intf_ports Vaux1] [get_bd_intf_pins xadc/Vaux1]
+##   connect_bd_intf_net -intf_net Vaux8_1 [get_bd_intf_ports Vaux8] [get_bd_intf_pins xadc/Vaux8]
+##   connect_bd_intf_net -intf_net Vaux9_1 [get_bd_intf_ports Vaux9] [get_bd_intf_pins xadc/Vaux9]
+##   connect_bd_intf_net -intf_net Vp_Vn_1 [get_bd_intf_ports Vp_Vn] [get_bd_intf_pins xadc/Vp_Vn]
+##   connect_bd_intf_net -intf_net axi_protocol_converter_0_M_AXI [get_bd_intf_pins axi_protocol_converter_0/M_AXI] [get_bd_intf_pins xadc/s_axi_lite]
+##   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_ports M_AXI_GP0] [get_bd_intf_pins processing_system7/M_AXI_GP0]
+##   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP1 [get_bd_intf_pins axi_register_slice_0/S_AXI] [get_bd_intf_pins processing_system7/M_AXI_GP1]
+##   connect_bd_intf_net -intf_net axi_register_slice_0_M_AXI [get_bd_intf_pins axi_register_slice_0/M_AXI] [get_bd_intf_pins axi_protocol_converter_0/S_AXI]
+##   connect_bd_intf_net -intf_net processing_system7_0_ddr [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7/DDR]
+##   connect_bd_intf_net -intf_net processing_system7_0_fixed_io [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7/FIXED_IO]
+##   connect_bd_intf_net -intf_net processing_system7_GPIO_0 [get_bd_intf_ports GPIO] [get_bd_intf_pins processing_system7/GPIO_0]
+##   connect_bd_intf_net -intf_net processing_system7_SPI_0 [get_bd_intf_ports SPI0] [get_bd_intf_pins processing_system7/SPI_0]
+##   connect_bd_intf_net -intf_net s_axi_hp0_1 [get_bd_intf_ports S_AXI_HP0] [get_bd_intf_pins processing_system7/S_AXI_HP0]
+##   connect_bd_intf_net -intf_net s_axi_hp1_1 [get_bd_intf_ports S_AXI_HP1] [get_bd_intf_pins processing_system7/S_AXI_HP1]
+##   connect_bd_intf_net -intf_net s_axi_hp2_1 [get_bd_intf_ports S_AXI_HP2] [get_bd_intf_pins processing_system7/S_AXI_HP2]
+##   connect_bd_intf_net -intf_net s_axi_hp3_1 [get_bd_intf_ports S_AXI_HP3] [get_bd_intf_pins processing_system7/S_AXI_HP3]
+##   # Create port connections
+##   connect_bd_net -net m_axi_gp0_aclk_1 [get_bd_ports M_AXI_GP0_ACLK] [get_bd_pins processing_system7/M_AXI_GP0_ACLK]
+##   connect_bd_net -net proc_sys_reset_0_interconnect_aresetn [get_bd_pins axi_protocol_converter_0/aresetn] [get_bd_pins proc_sys_reset/interconnect_aresetn] [get_bd_pins axi_register_slice_0/aresetn] 
+##   connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins proc_sys_reset/peripheral_aresetn] [get_bd_pins xadc/s_axi_aresetn]
+##   connect_bd_net -net processing_system7_0_fclk_clk0 [get_bd_ports FCLK_CLK0] [get_bd_pins processing_system7/FCLK_CLK0]
+##   connect_bd_net -net processing_system7_0_fclk_clk1 [get_bd_ports FCLK_CLK1] [get_bd_pins processing_system7/FCLK_CLK1]
+##   connect_bd_net -net processing_system7_0_fclk_clk2 [get_bd_ports FCLK_CLK2] [get_bd_pins processing_system7/FCLK_CLK2]
+##   connect_bd_net -net processing_system7_0_fclk_clk3 [get_bd_ports FCLK_CLK3] [get_bd_pins axi_protocol_converter_0/aclk] [get_bd_pins proc_sys_reset/slowest_sync_clk] [get_bd_pins processing_system7/FCLK_CLK3] [get_bd_pins processing_system7/M_AXI_GP1_ACLK] [get_bd_pins xadc/s_axi_aclk] [get_bd_pins axi_register_slice_0/aclk]
+##   connect_bd_net -net processing_system7_0_fclk_reset0_n [get_bd_ports FCLK_RESET0_N] [get_bd_pins processing_system7/FCLK_RESET0_N]
+##   connect_bd_net -net processing_system7_0_fclk_reset1_n [get_bd_ports FCLK_RESET1_N] [get_bd_pins processing_system7/FCLK_RESET1_N]
+##   connect_bd_net -net processing_system7_0_fclk_reset2_n [get_bd_ports FCLK_RESET2_N] [get_bd_pins processing_system7/FCLK_RESET2_N]
+##   connect_bd_net -net processing_system7_0_fclk_reset3_n [get_bd_ports FCLK_RESET3_N] [get_bd_pins proc_sys_reset/ext_reset_in] [get_bd_pins processing_system7/FCLK_RESET3_N]
+##   connect_bd_net -net s_axi_hp0_aclk [get_bd_ports S_AXI_HP0_aclk] [get_bd_pins processing_system7/S_AXI_GP0_ACLK]
+##   connect_bd_net -net s_axi_hp0_aclk [get_bd_ports S_AXI_HP0_aclk] [get_bd_pins processing_system7/S_AXI_HP0_ACLK]
+##   connect_bd_net -net s_axi_hp1_aclk [get_bd_ports S_AXI_HP1_aclk] [get_bd_pins processing_system7/S_AXI_HP1_ACLK]
+##   connect_bd_net -net s_axi_hp2_aclk [get_bd_ports S_AXI_HP2_aclk] [get_bd_pins processing_system7/S_AXI_HP2_ACLK]
+##   connect_bd_net -net s_axi_hp3_aclk [get_bd_ports S_AXI_HP3_aclk] [get_bd_pins processing_system7/S_AXI_HP3_ACLK]
+##   connect_bd_net -net xadc_ip2intc_irpt [get_bd_pins processing_system7/IRQ_F2P] [get_bd_pins xadc/ip2intc_irpt]
+##   connect_bd_net -net xlconstant_dout [get_bd_pins proc_sys_reset/aux_reset_in] [get_bd_pins xlconstant/dout]
+## 
+##   # Create address segments
+##   assign_bd_address -offset 0x40000000 -range 0x40000000 -target_address_space [get_bd_addr_spaces processing_system7/Data] [get_bd_addr_segs M_AXI_GP0/Reg] -force
+##   assign_bd_address -offset 0x83C00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7/Data] [get_bd_addr_segs xadc/s_axi_lite/Reg] -force
+##   assign_bd_address -offset 0x00000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces S_AXI_HP0] [get_bd_addr_segs processing_system7/S_AXI_HP0/HP0_DDR_LOWOCM] -force
+##   assign_bd_address -offset 0x00000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces S_AXI_HP1] [get_bd_addr_segs processing_system7/S_AXI_HP1/HP1_DDR_LOWOCM] -force
+##   assign_bd_address -offset 0x00000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces S_AXI_HP2] [get_bd_addr_segs processing_system7/S_AXI_HP2/HP2_DDR_LOWOCM] -force
+##   assign_bd_address -offset 0x00000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces S_AXI_HP3] [get_bd_addr_segs processing_system7/S_AXI_HP3/HP3_DDR_LOWOCM] -force
+## 
+##   # Restore current instance
+##   current_bd_instance $oldCurInst
+## 
+##   validate_bd_design
+##   save_bd_design
+## }
+## create_root_design ""
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+create_bd_cell: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 7104.422 ; gain = 0.000 ; free physical = 131 ; free virtual = 10999
+Slave segment '/M_AXI_GP0/Reg' is being assigned into address space '/processing_system7/Data' at <0x4000_0000 [ 1G ]>.
+Slave segment '/xadc/s_axi_lite/Reg' is being assigned into address space '/processing_system7/Data' at <0x83C0_0000 [ 64K ]>.
+Slave segment '/processing_system7/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/S_AXI_HP0' at <0x0000_0000 [ 512M ]>.
+Slave segment '/processing_system7/S_AXI_HP1/HP1_DDR_LOWOCM' is being assigned into address space '/S_AXI_HP1' at <0x0000_0000 [ 512M ]>.
+Slave segment '/processing_system7/S_AXI_HP2/HP2_DDR_LOWOCM' is being assigned into address space '/S_AXI_HP2' at <0x0000_0000 [ 512M ]>.
+Slave segment '/processing_system7/S_AXI_HP3/HP3_DDR_LOWOCM' is being assigned into address space '/S_AXI_HP3' at <0x0000_0000 [ 512M ]>.
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [#UNDEF] When using EMIO pins for SPI_0 tie SSIN High in the PL bitstream
+WARNING: [BD 41-927] Following properties on pin /xadc/s_axi_aclk have been updated from connected ip, but BD cell '/xadc' does not accept parameter changes, so they may not be synchronized with cell properties:
+	FREQ_HZ = 200000000 
+Please resolve any mismatches by directly setting properties on BD cell </xadc> to completely resolve these warnings.
+Wrote  : </home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd> 
+Wrote  : </home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+# generate_target all [get_files    system.bd]
+INFO: [BD 41-1662] The design 'system.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/synth/system.v
+VHDL Output written to : /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/sim/system.v
+VHDL Output written to : /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/hdl/system_wrapper.v
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/ip/system_axi_protocol_converter_0_0/system_axi_protocol_converter_0_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_protocol_converter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_register_slice_0 .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP1'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_GP0'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP1'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP2'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP3'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xadc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant .
+Exporting to file /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/synth/system.hwdef
+generate_target: Time (s): cpu = 00:00:47 ; elapsed = 00:00:43 . Memory (MB): peak = 7104.422 ; gain = 0.000 ; free physical = 136 ; free virtual = 10959
+# add_files                         ../../$path_rtl
+# add_files                         $path_rtl
+# add_files                         $path_bd
+# set ip_files [glob -nocomplain $path_ip/*.xci]
+# if {$ip_files != ""} {
+# add_files                         $ip_files
+# }
+# add_files -fileset constrs_1      $path_sdc/red_pitaya.xdc
+# add_files -fileset constrs_1      $path_sdc_prj/red_pitaya.xdc
+# import_files -force
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+# set_property top red_pitaya_top [current_fileset]
+# update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_compile_order -fileset sources_1
+source /home/duguid/RedPitaya-FPGA/prj/Examples/make_project.tcl
+# set project_name "Knight_rider"
+# cd $project_name
+couldn't change working directory to "Knight_rider": no such file or directory
+    while executing
+"cd $project_name"
+    (file "/home/duguid/RedPitaya-FPGA/prj/Examples/make_project.tcl" line 12)
+source /home/duguid/RedPitaya-FPGA/prj/Examples/make_project.tcl
+# set project_name "Led_blink"
+# cd $project_name
+couldn't change working directory to "Led_blink": no such file or directory
+    while executing
+"cd $project_name"
+    (file "/home/duguid/RedPitaya-FPGA/prj/Examples/make_project.tcl" line 12)
+ls
+WARNING: [Common 17-259] Unknown Tcl command 'ls' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+dts
+ip
+project
+rtl
+sdc
+tbn
+pwd
+/home/duguid/RedPitaya-FPGA/prj/v0.94
+cd ..
+ls
+WARNING: [Common 17-259] Unknown Tcl command 'ls' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+axi4lite
+barebones
+barebones_250
+classic
+Examples
+fsbl
+logic
+logic_250
+mercury
+stream_app
+stream_app_250
+stream_app_4ch
+tft
+v0.94
+v0.94_250
+cd Examples
+ls
+WARNING: [Common 17-259] Unknown Tcl command 'ls' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+Frequency_counter
+Knight_rider
+Led_blink
+make_project.tcl
+README.md
+Simple_moving_average
+Stopwatch
+Vga_draw
+Vga_game
+Vga_image
+source /home/duguid/RedPitaya-FPGA/prj/Examples/make_project.tcl
+# set project_name "Knight_rider"
+# cd $project_name
+# source make_project.tcl
+## set project_name Knight_rider
+## set part_name xc7z010clg400-1
+## set bd_path tmp/$project_name/$project_name.srcs/sources_1/bd/system
+## file delete -force tmp/$project_name
+## create_project $project_name tmp/$project_name -part $part_name
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.1/data/ip'.
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 7222.477 ; gain = 0.000 ; free physical = 144 ; free virtual = 10875
+## create_bd_design system
+Wrote  : </home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/Knight_rider/Knight_rider.srcs/sources_1/bd/system/system.bd> 
+## source cfg/ports.tcl
+### create_bd_port -dir I -from 13 -to 0 adc_dat_a_i
+### create_bd_port -dir I -from 13 -to 0 adc_dat_b_i
+### create_bd_port -dir I adc_clk_p_i
+### create_bd_port -dir I adc_clk_n_i
+### create_bd_port -dir O adc_enc_p_o
+### create_bd_port -dir O adc_enc_n_o
+### create_bd_port -dir O adc_csn_o
+### create_bd_port -dir O -from 13 -to 0 dac_dat_o
+### create_bd_port -dir O dac_clk_o
+### create_bd_port -dir O dac_rst_o
+### create_bd_port -dir O dac_sel_o
+### create_bd_port -dir O dac_wrt_o
+### create_bd_port -dir O -from 3 -to 0 dac_pwm_o
+### create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vp_Vn
+### create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vaux0
+### create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vaux1
+### create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vaux9
+### create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vaux8
+### create_bd_port -dir IO -from 7 -to 0 exp_p_tri_io
+### create_bd_port -dir IO -from 7 -to 0 exp_n_tri_io
+### create_bd_port -dir O -from 1 -to 0 daisy_p_o
+### create_bd_port -dir O -from 1 -to 0 daisy_n_o
+### create_bd_port -dir I -from 1 -to 0 daisy_p_i
+### create_bd_port -dir I -from 1 -to 0 daisy_n_i
+### create_bd_port -dir O -from 7 -to 0 led_o
+## set_property IP_REPO_PATHS tmp/cores [current_project]
+## update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/cores'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+## set files [glob -nocomplain projects/$project_name/*.v projects/$project_name/*.sv]
+## if {[llength $files] > 0} {
+##   add_files -norecurse $files
+## }
+## startgroup
+## create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7 processing_system7_0
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+## set_property -dict [list CONFIG.PCW_USE_S_AXI_HP0 {1}] [get_bd_cells processing_system7_0]
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+## set_property -dict [list CONFIG.PCW_IMPORT_BOARD_PRESET {cfg/red_pitaya.xml}] [get_bd_cells processing_system7_0]
+INFO: [PS7-1] Applying Custom Preset cfg/red_pitaya.xml...
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+## endgroup
+## startgroup
+## create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf util_ds_buf_0
+## set_property -dict [list CONFIG.C_SIZE {2}] [get_bd_cells util_ds_buf_0]
+## create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf util_ds_buf_1
+## set_property -dict [list CONFIG.C_SIZE {2}] [get_bd_cells util_ds_buf_1]
+## create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf util_ds_buf_2
+## set_property -dict [list CONFIG.C_SIZE {2}] [get_bd_cells util_ds_buf_2]
+## set_property -dict [list CONFIG.C_BUF_TYPE {OBUFDS}] [get_bd_cells util_ds_buf_2]
+## endgroup
+## startgroup
+## create_bd_cell -type ip -vlnv xilinx.com:ip:c_counter_binary c_counter_binary_0
+## set_property -dict [list CONFIG.Output_Width {32}] [get_bd_cells c_counter_binary_0]
+## endgroup
+## startgroup
+## create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice xlslice_0
+## set_property -dict [list CONFIG.DIN_TO {23} CONFIG.DIN_FROM {23} CONFIG.DIN_WITDH {32} CONFIG.DOUT_WIDTH {1}] [get_bd_cells xlslice_0]
+CRITICAL WARNING: [BD 41-1276] Cannot set the parameter DIN_WITDH on /xlslice_0. Parameter does not exist
+## endgroup
+## set_property LEFT 7 [get_bd_ports led_o]
+## add_files -norecurse knight_rider.v
+## startgroup
+## create_bd_cell -type module -reference knight_rider knight_rider_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/cores'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+## create_bd_cell -type module -reference knight_rider knight_rider_1
+## set_property -dict [list CONFIG.leds_init {"0000000011"} CONFIG.dir_init {0}] [get_bd_cells knight_rider_0]
+## set_property -dict [list CONFIG.leds_init {"1100000000"} CONFIG.dir_init {1}] [get_bd_cells knight_rider_1]
+## endgroup
+## startgroup
+## create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic util_vector_logic_0
+## set_property -dict [list CONFIG.C_OPERATION {or} CONFIG.LOGO_FILE {data/sym_orgate.png}] [get_bd_cells util_vector_logic_0]
+## endgroup
+## connect_bd_net [get_bd_ports adc_clk_p_i] [get_bd_pins util_ds_buf_0/IBUF_DS_P]
+WARNING: [BD 41-1306] The connection to interface pin /util_ds_buf_0/IBUF_DS_P is being overridden by the user. This pin will not be connected as a part of interface connection CLK_IN_D
+## connect_bd_net [get_bd_ports adc_clk_n_i] [get_bd_pins util_ds_buf_0/IBUF_DS_N]
+WARNING: [BD 41-1306] The connection to interface pin /util_ds_buf_0/IBUF_DS_N is being overridden by the user. This pin will not be connected as a part of interface connection CLK_IN_D
+## connect_bd_net [get_bd_ports daisy_p_i] [get_bd_pins util_ds_buf_1/IBUF_DS_P]
+WARNING: [BD 41-1306] The connection to interface pin /util_ds_buf_1/IBUF_DS_P is being overridden by the user. This pin will not be connected as a part of interface connection CLK_IN_D
+## connect_bd_net [get_bd_ports daisy_n_i] [get_bd_pins util_ds_buf_1/IBUF_DS_N]
+WARNING: [BD 41-1306] The connection to interface pin /util_ds_buf_1/IBUF_DS_N is being overridden by the user. This pin will not be connected as a part of interface connection CLK_IN_D
+## connect_bd_net [get_bd_ports daisy_p_o] [get_bd_pins util_ds_buf_2/OBUF_DS_P]
+## connect_bd_net [get_bd_ports daisy_n_o] [get_bd_pins util_ds_buf_2/OBUF_DS_N]
+## connect_bd_net [get_bd_pins util_ds_buf_1/IBUF_OUT] [get_bd_pins util_ds_buf_2/OBUF_IN]
+## apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+## connect_bd_net [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+## connect_bd_net [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+## connect_bd_net [get_bd_pins c_counter_binary_0/Q] [get_bd_pins xlslice_0/Din]
+## connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins c_counter_binary_0/CLK]
+## connect_bd_net [get_bd_pins xlslice_0/Dout] [get_bd_pins knight_rider_0/clk]
+## connect_bd_net [get_bd_pins knight_rider_0/led_out] [get_bd_pins util_vector_logic_0/Op1]
+## connect_bd_net [get_bd_pins knight_rider_1/led_out] [get_bd_pins util_vector_logic_0/Op2]
+## connect_bd_net [get_bd_pins knight_rider_1/clk] [get_bd_pins xlslice_0/Dout]
+## connect_bd_net [get_bd_ports led_o] [get_bd_pins util_vector_logic_0/Res]
+## generate_target all [get_files  $bd_path/system.bd]
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [#UNDEF] When using EMIO pins for SPI_0 tie SSIN High in the PL bitstream
+Wrote  : </home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/Knight_rider/Knight_rider.srcs/sources_1/bd/system/system.bd> 
+Wrote  : </home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/Knight_rider/Knight_rider.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+VHDL Output written to : /home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/Knight_rider/Knight_rider.srcs/sources_1/bd/system/synth/system.v
+VHDL Output written to : /home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/Knight_rider/Knight_rider.srcs/sources_1/bd/system/sim/system.v
+VHDL Output written to : /home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/Knight_rider/Knight_rider.srcs/sources_1/bd/system/hdl/system_wrapper.v
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_ds_buf_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block c_counter_binary_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block knight_rider_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block knight_rider_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+Exporting to file /home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/Knight_rider/Knight_rider.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file /home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/Knight_rider/Knight_rider.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File /home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/Knight_rider/Knight_rider.srcs/sources_1/bd/system/synth/system.hwdef
+generate_target: Time (s): cpu = 00:00:30 ; elapsed = 00:00:28 . Memory (MB): peak = 7222.477 ; gain = 0.000 ; free physical = 141 ; free virtual = 10816
+## make_wrapper -files [get_files $bd_path/system.bd] -top
+## add_files -norecurse $bd_path/hdl/system_wrapper.v
+## set files [glob -nocomplain cfg/*.xdc]
+## if {[llength $files] > 0} {
+##   add_files -norecurse -fileset constrs_1 $files
+## }
+## set_property VERILOG_DEFINE {TOOL_VIVADO} [current_fileset]
+## set_property STRATEGY Flow_PerfOptimized_High [get_runs synth_1]
+## set_property STRATEGY Performance_NetDelay_high [get_runs impl_1]
+update_compile_order -fileset sources_1
+current_project redpitaya
+close_project
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Oct 12 19:44:39 2023] Launched system_util_vector_logic_0_0_synth_1, system_processing_system7_0_0_synth_1, system_util_ds_buf_0_0_synth_1, system_util_ds_buf_1_0_synth_1, system_util_ds_buf_2_0_synth_1, system_c_counter_binary_0_0_synth_1, system_knight_rider_0_0_synth_1, system_knight_rider_1_0_synth_1, synth_1...
+Run output will be captured here:
+system_util_vector_logic_0_0_synth_1: /home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/Knight_rider/Knight_rider.runs/system_util_vector_logic_0_0_synth_1/runme.log
+system_processing_system7_0_0_synth_1: /home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/Knight_rider/Knight_rider.runs/system_processing_system7_0_0_synth_1/runme.log
+system_util_ds_buf_0_0_synth_1: /home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/Knight_rider/Knight_rider.runs/system_util_ds_buf_0_0_synth_1/runme.log
+system_util_ds_buf_1_0_synth_1: /home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/Knight_rider/Knight_rider.runs/system_util_ds_buf_1_0_synth_1/runme.log
+system_util_ds_buf_2_0_synth_1: /home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/Knight_rider/Knight_rider.runs/system_util_ds_buf_2_0_synth_1/runme.log
+system_c_counter_binary_0_0_synth_1: /home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/Knight_rider/Knight_rider.runs/system_c_counter_binary_0_0_synth_1/runme.log
+system_knight_rider_0_0_synth_1: /home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/Knight_rider/Knight_rider.runs/system_knight_rider_0_0_synth_1/runme.log
+system_knight_rider_1_0_synth_1: /home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/Knight_rider/Knight_rider.runs/system_knight_rider_1_0_synth_1/runme.log
+synth_1: /home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/Knight_rider/Knight_rider.runs/synth_1/runme.log
+[Thu Oct 12 19:44:39 2023] Launched impl_1...
+Run output will be captured here: /home/duguid/RedPitaya-FPGA/prj/Examples/Knight_rider/tmp/Knight_rider/Knight_rider.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:23 ; elapsed = 00:00:19 . Memory (MB): peak = 7291.762 ; gain = 0.000 ; free physical = 183 ; free virtual = 10832
+regenerate_bd_layout
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 7294.160 ; gain = 0.000 ; free physical = 2302 ; free virtual = 11072
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'system_i/util_ds_buf_1/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for DIFF_TERM but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'system_i/util_ds_buf_1/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'DIFF_TERM' constraint because net 'system_i/util_ds_buf_1/IBUF_OUT[1]' is not directly connected to top level port. Synthesis is ignored for DIFF_TERM but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'system_i/util_ds_buf_1/IBUF_OUT[1]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'system_i/util_ds_buf_2/OBUF_IN[0]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'system_i/util_ds_buf_2/OBUF_IN[1]' is not directly connected to top level port. Synthesis is ignored for SLEW but preserved for implementation.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Constraints 18-5170] The checkpoint was created with non-default parameter values which do not match the current Vivado settings.  Mismatching parameters are:
+  general.maxThreads
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.20 . Memory (MB): peak = 7711.738 ; gain = 0.000 ; free physical = 1825 ; free virtual = 10580
+Restored from archive | CPU: 0.200000 secs | Memory: 0.516182 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.20 . Memory (MB): peak = 7711.738 ; gain = 0.000 ; free physical = 1825 ; free virtual = 10580
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7711.738 ; gain = 0.000 ; free physical = 1825 ; free virtual = 10581
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 2 instances
+
+open_run: Time (s): cpu = 00:00:27 ; elapsed = 00:00:20 . Memory (MB): peak = 7895.352 ; gain = 601.191 ; free physical = 1721 ; free virtual = 10500

@@ -1,0 +1,96 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Oct  6 22:20:37 2023
+# Process ID: 24721
+# Current directory: /home/duguid/RedPitaya-FPGA
+# Command line: vivado -source red_pitaya_vivado_project_Z10.tcl -tclargs v0.94 
+# Log file: /home/duguid/RedPitaya-FPGA/vivado.log
+# Journal file: /home/duguid/RedPitaya-FPGA/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source red_pitaya_vivado_project_Z10.tcl
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+update_compile_order -fileset sources_1
+file mkdir /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/new
+close [ open /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/new/led.vhd w ]
+add_files /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/new/led.vhd
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd]
+refresh_design
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+close [ open /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/new/knight_rider.v w ]
+add_files /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/new/knight_rider.v
+update_compile_order -fileset sources_1
+file mkdir /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sim_1/new/knight_rider_tb.v w ]
+add_files -fileset sim_1 /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sim_1/new/knight_rider_tb.v
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top knight_rider_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source knight_rider_tb.tcl
+current_wave_config {Untitled 1}
+add_wave {{/knight_rider_tb/kr/leds}} 
+save_wave_config {/home/duguid/RedPitaya-FPGA/prj/v0.94/project/knight_rider_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse /home/duguid/RedPitaya-FPGA/prj/v0.94/project/knight_rider_tb_behav.wcfg
+set_property xsim.view /home/duguid/RedPitaya-FPGA/prj/v0.94/project/knight_rider_tb_behav.wcfg [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config /home/duguid/RedPitaya-FPGA/prj/v0.94/project/knight_rider_tb_behav.wcfg
+source knight_rider_tb.tcl
+add_bp {/home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sim_1/new/knight_rider_tb.v} 34
+remove_bps -file {/home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sim_1/new/knight_rider_tb.v} -line 34
+open_bd_design {/home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd}
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd]
+synth_design -rtl -name rtl_1
+generate_target all [get_files  /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd]
+export_ip_user_files -of_objects [get_files /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd]
+export_simulation -of_objects [get_files /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd] -directory /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.ip_user_files/sim_scripts -ip_user_files_dir /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.ip_user_files -ipstatic_source_dir /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.cache/compile_simlib/modelsim} {questa=/home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.cache/compile_simlib/questa} {ies=/home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.cache/compile_simlib/ies} {xcelium=/home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.cache/compile_simlib/xcelium} {vcs=/home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.cache/compile_simlib/vcs} {riviera=/home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+save_wave_config {/home/duguid/RedPitaya-FPGA/prj/v0.94/project/knight_rider_tb_behav.wcfg}
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+open_bd_design {/home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd}
+create_bd_design "design_1"
+update_compile_order -fileset sources_1
+current_bd_design [get_bd_designs system]
+open_bd_design {/home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd}
+current_bd_design [get_bd_designs design_1]
+close_bd_design [get_bd_designs design_1]
+export_ip_user_files -of_objects  [get_files /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/design_1/design_1.bd] -no_script -reset -force -quiet
+remove_files  /home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/design_1/design_1.bd
+open_bd_design {/home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd}
+open_bd_design {/home/duguid/RedPitaya-FPGA/prj/v0.94/project/redpitaya.srcs/sources_1/bd/system/system.bd}
+create_bd_cell -type module -reference knight_rider knight_rider_0
+set_property location {2.5 1089 463} [get_bd_cells knight_rider_0]
+close_sim
